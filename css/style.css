@@ -58,13 +58,13 @@
 		position:relative;
 }
 	#body {
-		padding-bottom:700px; 	/* Stessa altezza di #footer */
+		padding-bottom:650px; 	/* Stessa altezza di #footer */
 }
 	#footer {
 		position:absolute;
 		bottom:0;		
 		width:100%;
-		height:700px;		 	/* Altezza del footer*/
+		height:650px;		 	/* Altezza del footer*/
 }
 
 /* ===============================================================================================================================
@@ -586,6 +586,29 @@
 }
 
 /* ===============================================================================================================================
+   	:: BILLBOARD
+   =============================================================================================================================== */	
+	
+	.billboard { 
+		position:relative; 
+		width:100%;
+		height: 100%;
+		overflow:hidden;		
+		animation: 800ms ease-out 0s normal none 1 fadeIn; 
+	}
+	
+	.billboard figure {
+		position: absolute;	 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		animation: 800ms ease-out 0s normal none 1 rotateFade;
+}		
+	.billboard p 		{ margin-top: 1em; }
+	.billboard .cta 	{ margin-top: 2em; }
+	.billboard p a 		{ color: inherit; text-decoration: underline; }
+
+/* ===============================================================================================================================
    	@BANNER
    =============================================================================================================================== */	
 
@@ -626,7 +649,6 @@
 		margin:5px 0; 
 		line-height:1.2em; 
 }
-
 	.cd  { 
 		display: block; 
 		width: 100%;
@@ -649,30 +671,7 @@
 		border: medium none;
 		border-radius: 100% 100% 100% 100% / 33px 33px 33px 33px; 
 }
- 
 
-/* ===============================================================================================================================
-   	:: BILLBOARD
-   =============================================================================================================================== */	
-	
-	.billboard { 
-		position:relative; 
-		width:100%;
-		height: 100%;
-		overflow:hidden;		
-		animation: 800ms ease-out 0s normal none 1 fadeIn; 
-	}
-	
-	.billboard figure {
-		position: absolute;	 
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		animation: 800ms ease-out 0s normal none 1 rotateFade;
-}		
-	.billboard p 		{ margin-top: 1em; }
-	.billboard .cta 	{ margin-top: 2em; }
-	.billboard p a 		{ color: inherit; text-decoration: underline; }
 
 /* ===============================================================================================================================
    	:: TILES
@@ -684,13 +683,12 @@
 		display:block;
 		width:100%;
 }
+	.tile figure, .tile article {
+		margin:1.5em 0; 
+		padding:0 1.5em; 
+}
 	.tile figure { 
 		text-align:center; 
-}
-	.tile article, 
-	.tile figure { 
-		padding:25px; 
-		height:220px;
 }
 	.tile.x2 article { 
 		margin-left:50%; 
@@ -708,6 +706,24 @@
 	.col-06 .y2 figure { 
 		min-height:454px; 
 }
+
+/* ===============================================================================================================================
+   	:: TILES-GRID
+   =============================================================================================================================== */	
+
+	.tiles.grid { 
+		border-top: 1px solid #dfdfdf; 
+		border-left:1px solid #dfdfdf; 
+}
+	.tiles.grid .tile { 
+		border-right:1px solid #dfdfdf; 
+		border-left:1px solid #ffffff;
+		border-top:1px solid #ffffff; 
+		border-bottom:1px solid #dfdfdf; 
+}
+	
+
+
 
 	
 /* ===============================================================================================================================
