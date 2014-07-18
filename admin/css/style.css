@@ -1,0 +1,374 @@
+
+	/* Zooweb v1.2 http://www.zooweb.it */
+	/* WebDesign Simone Carè */
+
+/* ===============================================================================================================================
+   	@Import
+   =============================================================================================================================== */
+
+	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+	@import url(base.css);
+	@import url(tipografia.css);
+	@import url(form.css);
+	@import url(table.css);
+	@import url(color.css);
+	
+/* =====================================================================================================
+   	@global
+   =============================================================================================================================== */
+
+	html, body { 
+		height:100%; 
+}
+	html { 
+		font-size: 62.5%; 
+} 
+	body {
+		background-color: transparent;
+		font-family: "Lato", Helvetica, Arial, sans-serif;
+		font-size: 1.4em;
+		font-size: 1.4rem;
+		line-height: 1.428; /* $line-height-base ÷ $fontbase */
+	 }
+   
+   .frame,
+   .banner { 
+		margin-bottom: 1.428em; 
+}
+
+	.cf:before,cf:after {
+		content:"";
+		display:table;
+	}
+
+	.cf:after {
+		clear:both;
+	}
+
+	/* For IE 6/7 (trigger hasLayout) */
+	.cf {
+		*zoom:1;
+	}
+
+/* ===============================================================================================================================
+   	@layout
+   =============================================================================================================================== */
+
+	#wrap,
+	#header,
+	#main { 
+		position:relative; 
+}
+	#wrap {
+		width:100%;	  
+		min-height: 100%;
+		z-index:10;
+		overflow:hidden;
+
+}		
+	* html #wrap { 
+		height: 100%; /* IE6 hack */ 
+}
+	#header {
+		height:64px;
+		line-height:64px;
+		z-index:30;
+}
+	#sidebar {
+		position: absolute;
+		left:0;
+		display: block;
+		width:240px;
+		min-height: 100%;
+		margin-top:-64px;
+		padding-top:64px;
+		z-index:20;
+}
+	#main {
+		margin-left: 240px;
+		min-height: 600px;
+}
+
+/* ===============================================================================================================================
+   	@header
+   =============================================================================================================================== */
+
+	#header .icon,
+	#header #search { 
+		float:left; 
+		margin-top:16px; 
+		line-height:1em; 
+}
+	#header section.left { 
+		margin-left:.75em; 
+}
+	#header section.right { 
+		margin-right:.75em; 
+}
+	#logo {
+		position:relative;
+		float:left;
+		width:240px;
+		height:64px;
+		line-height:64px; 
+		vertical-align:middle;
+		margin:0; 
+}
+	#logo a { 
+		display: block; 
+		border: 0 none;
+		padding:0 1em; 
+}
+	#logo i {
+		position:absolute;
+		right:.75em;
+		top: 50%;
+		margin-top:-.50em;
+}
+	.icon { 
+		line-height:1em;
+		display: block;
+		padding: .56em;
+		overflow:hidden;
+	}
+
+	#search input[type="text"] {
+		     width: 150px;
+		   padding: 7px 15px 7px 35px;
+}
+	#search input[type="text"]:focus {
+		width: 250px;
+}
+
+/* ===============================================================================================================================
+   	@navigation
+   =============================================================================================================================== */
+
+	.nav-main,
+	.nav-tabs { 
+		position:relative; 
+		overflow:hidden; 
+		clear:both;
+}
+	.nav-main > li > a { 
+		display: block; 
+		padding: .75em 1.5em;
+}
+	.nav-main > li > a.active { 
+		font-weight:bold;
+}
+	/*.nav-tabs*/
+		
+	.nav-tabs > li {
+		float: left;
+		margin-bottom: -1px;
+		margin-left:-1px;
+}
+	.nav-tabs > li > a {
+		display: block;
+		padding: 10px 15px;
+		position: relative;
+		line-height: 1.42857;
+		margin-right: 2px;
+		line-height: 1.42857;
+		margin-right: 2px;
+	}
+	
+/* ===============================================================================================================================
+   	@transizioni
+   =============================================================================================================================== */
+	
+	#wrap {	  
+	-webkit-transition: left 0.4s ease-in-out;
+	   -moz-transition: left 0.4s ease-in-out;
+	    -ms-transition: left 0.4s ease-in-out;
+	     -o-transition: left 0.4s ease-in-out;
+		    transition: left 0.4s ease-in-out;
+}
+	#search input[type="text"] {
+	-webkit-transition: all 0.7s ease 0s;
+	   -moz-transition: all 0.7s ease 0s;
+		 -o-transition: all 0.7s ease 0s;
+			transition: all 0.7s ease 0s;
+}
+.nav-main li a {	  
+	-webkit-transition: background 0.3s ease-in-out;
+	   -moz-transition: background 0.3s ease-in-out;
+	    -ms-transition: background 0.3s ease-in-out;
+	     -o-transition: background 0.3s ease-in-out;
+	        transition: background 0.3s ease-in-out;
+}
+
+/* ===============================================================================================================================
+   	@box-shadow
+   =============================================================================================================================== */
+
+	.frame {
+			 box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+	 -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+			 
+/* ===============================================================================================================================
+   	@background
+   =============================================================================================================================== */
+
+	html,
+	.nav-main li a.active, 
+	.nav-main li:hover a.active {		
+		background: url("../images/bg/lightnoise.png") repeat scroll 0 0 #ffffff; 
+}
+
+	#search input[type="text"] {
+		background: url("../images/icon/search-white.png") no-repeat 12px 9px #ffffff;
+}
+
+	.frame,
+	.form-box legend {
+		background: #ffffff;
+		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.98);
+}
+	#header,
+	.form-box fieldset,
+	.nav-tabs > li a.active, 
+	.nav-tabs > li a.active:hover, 
+	.nav-tabs > li a.active:focus {
+		background: #f7f7f7;
+		background: none repeat scroll 0 0 rgba(245, 245, 245, 0.98);
+}
+	#sidebar,
+	.icon,
+	.nav-toggle,
+	.sb-icon-search {
+		background: #323c46;  
+		background: none repeat scroll 0 0 rgba(50, 60, 70, 0.98); 
+}
+	#logo,
+	a.icon:hover,
+	.nav-main li:hover a {
+		background: #1e2832;
+		background: none repeat scroll 0 0 rgba(30, 40, 50, 0.98); 
+}
+
+/* ===============================================================================================================================
+   	@border
+   =============================================================================================================================== */
+
+ 	.nav-tabs > li > a {
+		border: 1px solid rgba(0, 0, 0, 0);
+}
+	.frame,
+	.nav-tabs > li a.active, 
+	.nav-tabs > li a.active:hover, 
+	.nav-tabs > li a.active:focus {
+	-moz-border-bottom-colors: none; 
+	  -moz-border-left-colors: none; 
+     -moz-border-right-colors: none; 
+	   -moz-border-top-colors: none; 
+				 border-color: #E5E5E5 #DBDBDB rgba(0, 0, 0, 0);
+				 border-image: none;
+				 border-style: solid;
+				 border-width: 1px;
+}	
+	.frame:nth-child(n),
+	#search input[type="text"] { 
+		border: medium none; 
+}
+
+/* ===============================================================================================================================
+   	@border-radius
+   =============================================================================================================================== */
+
+	.icon,
+	.btn,
+	.frame { 	
+	-webkit-border-radius: 3px;	
+	 -khtml-border-radius: 3px;
+	   -moz-border-radius: 3px; 
+			border-radius: 3px; 
+}
+
+ 	.nav-tabs > li > a {
+	-webkit-border-radius: 3px 3px 0 0;	
+	 -khtml-border-radius: 3px 3px 0 0;
+	   -moz-border-radius: 3px 3px 0 0; 
+		    border-radius: 3px 3px 0 0;
+}
+	
+	#search input[type="text"] {
+	-webkit-border-radius: 20px;
+	 -khtml-border-radius: 20px;
+	   -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+/* ===============================================================================================================================
+   	@text-shadow
+   =============================================================================================================================== */
+
+	#header,
+	#search input[type="text"] { 
+			   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* ===============================================================================================================================
+   	@color
+   =============================================================================================================================== */
+
+	a { 
+		color: #2980b9; 
+}
+	a:hover,
+	a:focus { 
+		color: #3498db; 
+}
+	body,
+	.nav-main li a.active, 
+	.nav-main li:hover a.active,
+	.nav-tabs > li a.active, 
+	.nav-tabs > li a.active:hover, 
+	.nav-tabs > li a.active:focus { 
+		color: #1e2832; 
+}	 	
+	.nav-main a,
+	#search input[type="text"] { 
+		color:#bdc3c7; 
+}
+	#logo a { 
+		color:#ecf0f1; 
+}
+	#header a.icon,
+	#logo a:hover,
+	#logo a:focus,
+	.nav-main a:hover { 
+		color: #ffffff; 
+}	 
+	-webkit-input-placeholder { color: #8a8a8a; }
+		-ms-input-placeholder { color: #8a8a8a; }
+			 -moz-placeholder { color: #8a8a8a; }
+
+/* ===============================================================================================================================
+   	@sezioni
+   =============================================================================================================================== */
+
+	#login { 
+		width:250px;
+		margin:15% auto 0;
+	}
+	
+	.section { margin: 1.428em; overflow:hidden; }
+	
+	.heading { position:relative; overflow:auto; width:100%; }
+	.heading .title { float:left; }
+	.heading .nav { text-align:right; }
+
+	.nav {}		
+	
+	
+	
+	
+	
+	

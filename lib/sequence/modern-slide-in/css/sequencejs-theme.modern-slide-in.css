@@ -1,0 +1,210 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Modern Slide In
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/modern-slide-in/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+
+/* !CSS RESET */
+/* prefix declarations */
+/* THEME STYLES */
+
+/* this container is just to ensure the background color stretches all the way across on bigger screens */
+
+.sequence-theme { 
+	background:#efefef;
+	margin-top:-1em;
+	margin-bottom:2em; }
+
+#sequence {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	height: 400px;
+	width: 100%;
+	max-width: 1280px;  
+}
+#sequence > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+}
+#sequence > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: -50%; */
+  z-index: 1;
+}
+#sequence > .sequence-canvas > li img {
+  height: 96%;
+}
+#sequence > .sequence-canvas li > * {
+  /* only cause the left and opacity properties to transition */
+  -webkit-transition-property: left, opacity;
+  -moz-transition-property: left, opacity;
+  -ms-transition-property: left, opacity;
+  -o-transition-property: left, opacity;
+  transition-property: left, opacity;
+  position:absolute;
+}
+
+.sequence-next,
+.sequence-prev 		{
+	position: absolute;
+	     top: 50%;
+	  height: 130px;
+  margin-top: -47.5px;
+	 padding: 1rem 1.5rem;
+	  cursor: pointer;
+	 z-index: 1000;
+	 display: none;
+}
+
+.sequence-prev 		{ left: 3%; } 
+.sequence-next 		{ right: 3%; }
+
+.sequence-prev img,
+.sequence-next img 	{ height: 100%; width: auto; }
+
+.sequence-pause {
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sequence-paused {
+  opacity: 0.3;
+}
+
+#sequence-preloader {
+  /* background: #d9d9d9; */
+}
+
+.sequence-pagination {
+  bottom: 1%;
+  display: none;
+  right: 6%;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.sequence-pagination li {
+  display: inline-block;
+  *display: inline;
+  /* Hack for IE7 and below as they don't support inline-block */
+  height: 140px;
+}
+.sequence-pagination li img {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: margin-bottom, opacity;
+  -moz-transition-property: margin-bottom, opacity;
+  -ms-transition-property: margin-bottom, opacity;
+  -o-transition-property: margin-bottom, opacity;
+  transition-property: margin-bottom, opacity;
+}
+.sequence-pagination li img:hover {
+  margin-bottom: 4px;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.sequence-pagination li.current img {
+  opacity: 1;
+}
+
+.sequence-next,
+.sequence-prev {
+  position: absolute;
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.sequence-next:hover,
+.sequence-prev:hover {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+.title, 
+.subtitle, 
+.description,
+.model							{ opacity:0; width: 45%; }
+
+.animate-in .title,
+.animate-in .subtitle,
+.animate-in .description,
+.animate-in .model 				{ opacity: 1; }
+
+.animate-out .title,
+.animate-out .subtitle,
+.animate-out .description,
+.animate-out .model				{ opacity:0; }
+
+.title							{ left: 60%; top:20%; font-weight:bold; }
+.animate-in .title 				{ left: 40%; }
+.animate-out .title 			{ left: 60%; }
+
+.subtitle 						{ left: 70%; top:32%; }
+.animate-in .subtitle 			{ left: 40%; }
+.animate-out .subtitle 			{ left: 70%; }
+
+.description 					{ left: 80%; top:42%; }
+.animate-in .description 		{ left: 40%; }
+.animate-out .description 		{ left: 80%; }
+
+.model							{ left: 90%; top:20%; }
+.animate-in .model				{ left: 17%; }
+.animate-out .model				{ left: 0; }
+
+.model { 
+		position: relative;
+  		min-width: 225px;  
+  		max-width: 266px; /* prevents the model from shrinking when the browser is resized */
+		height: auto !important;
+		max-height: 568px !important;
+}
+
+.animate-in .title,
+.animate-out .title,
+.animate-in .subtitle,
+.animate-out .subtitle,
+.animate-in .description,
+.animate-out .description,
+.animate-in .model,
+.animate-out .model {
+	-webkit-transition-duration: 0.7s;
+  	   -moz-transition-duration: 0.7s;
+        -ms-transition-duration: 0.7s;
+         -o-transition-duration: 0.7s;
+            transition-duration: 0.7s;
+  }

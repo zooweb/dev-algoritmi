@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="ZooAdmin">
+    <meta name="copyright" content="">
+
+    <title>CMS Admin</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=1.0.0"  />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css?v=1.0.0"  />
+
+	<!-- Font Awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include Sidr bundled CSS theme - Mobile Menù -->
+    <link rel="stylesheet" type="text/css" href="lib/sidr-1.2.1/css/jquery.sidr.dark.css"  />
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="lib/ckeditor/ckeditor.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>       
+</head>
+
+<body id="">
+<!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+<div id="wrap">
+
+    <header id="header" class="cf">
+    	<h1 id="logo" class="h6"><a href="dashboard.html">Algoritmi <strong>Admin</strong><i class="fa fa-home"></i></a></h1>
+        <section class="left">
+            <ul class="nav nav-inline"><li>
+                <a class="icon" href="#"><i class="fa fa-bars fa-lg"></i></a></li><li>
+                <form method="get" action="/search" id="search">
+                  <input name="q" type="text" size="40" placeholder="Cerca..." />
+                </form></li>
+            </ul>    
+        </section>
+        <section class="right">
+            <ul class="nav nav-inline"><li>
+                <span>Amministratore &nbsp; <i class="fa fa-lg fa-user"></i></span></li><li>
+                <a href="impostazioni.html" title="Impostazioni" class="icon"><i class="fa fa-lg fa-cog"></i></a></li><li>
+                <a href="index.html" title="Disconnetti" class="icon"><i class="fa fa-lg fa-power-off"></i></a></li>
+            </ul>
+        </section>
+    </header>
+    
+    <aside id="sidebar">
+        <nav>
+            <ul class="nav nav-main"><li>
+                <a href="dashboard.html" class="active"><i class="fa fa-dashboard fa-fw fa-lg"></i> Dashboard</a></li><li>
+                <a href="homepage.html"><i class="fa fa-home fa-fw fa-lg"></i> Homepage</a></li><li>
+                <a href="download.html"><i class="fa fa-download fa-fw fa-lg"></i> Download</a></li><li>
+                <a href="soluzioni.html"><i class="fa fa-magic fa-fw fa-lg"></i> Soluzioni</a></li><li>
+                <a href="anagrafiche.html"><i class="fa fa-users fa-fw fa-lg"></i> Anagrafiche</a></li><li>
+                <a href="profilo.html"><i class="fa fa-file-text-o fa-fw fa-lg"></i> Profilo</a></li><li>
+                <a href="servizi.html"><i class="fa fa-th-list fa-fw fa-lg"></i> Servizi</a></li><li>
+                <a href="news.html"><i class="fa fa-bullhorn fa-fw fa-lg"></i> News</a></li><li>
+                <a href="scadenze.html"><i class="fa fa-calendar fa-fw fa-lg"></i> Scadenze</a></li><li>
+                <a href="faq.html"><i class="fa fa-dot-circle-o fa-fw fa-lg"></i> F.A.Q.</a></li><li>
+                <a href="link.html"><i class="fa fa-link fa-fw fa-lg"></i> Link</a></li><li>
+                <a href="contatti.html"><i class="fa fa-envelope fa-fw fa-lg"></i> Contatti</a></li><li>
+                <a href="impostazioni.html"><i class="fa fa-cogs fa-fw fa-lg"></i> Impostazioni</a></li><li>
+                <a href="statistiche.html"><i class="fa fa-bar-chart-o fa-fw fa-lg"></i> Statistiche</a></li><li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <div id="main">
+    
+    	<section class="section">
+            <header class="heading">
+            	<h4 class="title"><i class="fa fa-dashboard fa-fw"></i> Dashboard</h4>
+                <nav class="right">
+                    <div class="btn-group">
+                      <a class="btn btn-default" href="#"><i class="fa fa-angle-left fa-lg fa-lg"></i></a>
+                      <a class="btn btn-midnight-blue" href="#"><i class="fa fa-floppy-o fa-fw fa-lg"></i> Salva</a>
+                    </div>
+                </nav>
+            </header>
+		</section>
+    	
+    	<section class="section frame">
+            <nav>
+            	<ul class="nav nav-tabs"><li>
+                	<a href="#" class="active"><i class="fa fa-file-text-o fa-fw"></i> Testo</a></li><li>
+                	<a href="#"><i class="fa fa-camera fa-fw"></i> Immagini</a></li><li>
+                	<a href="#"><i class="fa fa-download fa-fw"></i> Media</a></li><li>
+                	<a href="#"><i class="fa fa-unlock fa-fw"></i> Permessi</a></li><li>
+                	<a href="#"><i class="fa fa-phone fa-fw"></i> Dati assistenza</a></li>
+                </ul>
+            </nav>
+            <form id="" class="form-box">
+                <fieldset class="row xx">
+                    <div class="form-group col_12">
+                        <label for="" class="sr-only">Titolo</label>
+                        <input class="form-control input-lg" type="text" placeholder="Titolo">
+                    </div>
+                    <div class="form-group col_12">
+                        <label for="" class="sr-only">Sottotitolo</label>
+                        <input class="form-control" type="text" placeholder="Sottotitolo">
+                    </div>
+                    <div class="form-group col_12">
+                        <label for="" class="sr-only">Corpo</label>
+                        <textarea id="editor1" name="editor1" class="form-control" rows="5"></textarea>
+						<script>CKEDITOR.replace( 'editor1' );</script>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        
+    </div>
+
+</div>  
+    
+
+<!-- jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+<!-- Expanding Search Bar -->
+	<script src="lib/expanding-search-bar/classie.js"></script>
+	<script src="lib/expanding-search-bar/uisearch.js"></script>
+	<script>
+		new UISearch( document.getElementById( 'sb-search' ) );
+	</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script> 
+
+</body>
+</html>

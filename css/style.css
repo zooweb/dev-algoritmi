@@ -1,0 +1,920 @@
+/*	
+	style.css v.2.0
+	
+	WebDesign Simone Carè 
+	http://www.zooweb.it  
+		
+*/
+	@import url(http://fonts.googleapis.com/css?family=Lato:700,400,300,200);	
+
+/* ===============================================================================================================================
+   	@Hidden
+   =============================================================================================================================== */
+	
+	#notification,
+	#loading-bar { 
+		display:none; 
+}
+
+/* ===============================================================================================================================
+   	@Global
+   =============================================================================================================================== */
+
+	html {
+		background: url("/images/bg/lightnoise.png") repeat scroll 0 0 #f0f3f7;
+} 
+	body {
+		font-family: "Lato", Helvetica, Arial;
+		color: rgb(52, 73, 94);
+		font-size:14px;
+		line-height:1.4;
+		font-weight:200;
+}
+	a { 
+		color: #3498db;
+		-webkit-transition: 0.25s;
+		-moz-transition: 0.25s;
+		-o-transition: 0.25s;
+		transition: 0.25s;
+}
+	a:hover,
+	a:focus { 
+		color: #0992d0; 
+		transition: border-color 0.2s ease 0s, background-color 0.2s ease 0s, color 0.2s ease 0s;
+}
+	legend {
+		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95); 
+}
+	fieldset { 
+		background: none repeat scroll 0 0 rgba(243, 244, 245, 0.98); 
+}
+
+/* ===============================================================================================================================
+   	@Sticky Footer
+   =============================================================================================================================== */
+
+	#container {
+		min-height:100%;
+		position:relative;
+}
+	#body {
+		padding-bottom:700px; 	/* Stessa altezza di #footer */
+}
+	#footer {
+		position:absolute;
+		bottom:0;		
+		width:100%;
+		height:700px;		 	/* Altezza del footer*/
+}
+
+/* ===============================================================================================================================
+   	@tipografia
+   =============================================================================================================================== */
+	
+	h1, .h1 { font-size:72px; }
+	h2, .h2 { font-size:60px; }
+	h3, .h3 { font-size:48px; }
+	h4, .h4 { font-size:28px; }
+	h5, .h5 { font-size:20px; font-weight:300; }
+	h6, .h6 { font-size:15px; font-weight:400; }
+	
+	h1, h2, h3 { 
+		letter-spacing:-2px; 
+}
+	h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+		margin-bottom:.75em; 
+}
+	p { margin:1.5em 0; }
+	
+	ul, ol { 
+		margin-bottom:1.5em; 
+}
+	hr {
+		border-top:1px solid #eee
+}
+	blockquote, q {
+		quotes: none;
+}
+	blockquote {
+		color:inherit;
+		padding: .75em 1.5em;
+		margin: 0px 0px 1.5em;
+		border-left: 2px solid #dadada;
+}
+	blockquote, blockquote p {
+		font-size: 17.5px;
+		line-height:24px;
+		font-style:italic;
+		color:#8a8a8a;
+		margin: 0px 0px 1.5em;
+}	
+	blockquote p:last-child, 
+	blockquote ul:last-child, 
+	blockquote ol:last-child {
+    	margin-bottom: 0px;
+}	
+	blockquote cite {
+		display:block;
+		font-size:80%;
+		line-height:1.4;
+		color:#505050;
+		font-style:italic;
+}
+	::-moz-selection{
+		background-color:#d5eafc;
+		text-shadow:0 1px 0 #fff;
+}
+	::selection{
+		background-color:#d5eafc;
+		text-shadow:0 1px 0 #fff
+}
+	.page-header {
+		font-weight:700;
+		padding:.75em 0 .375em;
+		border-bottom:1px solid #dadada;
+}	
+	p.lead {
+		font-size:21px;
+		line-height:1.4;
+}
+
+
+/* ===============================================================================================================================
+   	@Form
+   =============================================================================================================================== */
+
+	output {
+		color: #555555;
+		font-size: 14px;
+		padding-top: 7px;
+		line-height: 1.428571429;
+}
+	legend {
+		color: #333333;
+		font-size: 21px;
+		margin-bottom: 1.5em;
+		border-bottom: 1px solid #e5e5e5;
+}
+	label {
+		font-weight: bold;
+		margin-bottom: 5px;
+}	
+	-webkit-input-placeholder { color: #8a8a8a; } /* Safari */
+		-ms-input-placeholder { color: #8a8a8a; } /* ie */
+			 -moz-placeholder { color: #8a8a8a; } /* firefox 19+ */
+	   input:-moz-placeholder { color: #8a8a8a; }
+
+/*  :: section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.section { 
+		padding-top:3em;
+		padding-bottom:3em;
+		position:relative; 
+}
+
+/*  :: divider :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.divider {
+		width:100%;		
+		position:absolute;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+}
+	.divider.up {
+		bottom:0;
+		height: 62px;
+		background-image: url('../images/bg/divider-up.png');
+}
+	.divider.down {
+		top:0;
+		height: 62px;
+		background-image: url('../images/bg/divider-down.png');
+}
+	.divider.line {
+		height: 1px;
+		background-image: url('../images/bg/divider-line.png');
+}
+
+/*  :: nest :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.nest {
+		position: absolute;
+		z-index: 1001;
+		top: 0px;
+		width: 106px;
+		height: 478px;
+		background-size: 106px 478px;
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+}
+	.nest.left {
+		left: 0px;
+		background-image: url('../images/bg/nest-left.png');
+}		
+	.nest.right {
+		right: 0px;
+		background-image: url('../images/bg/nest-right.png');
+}	
+
+/* ===============================================================================================================================
+   	@Layout
+   =============================================================================================================================== */	
+
+	.fix, .full, .fluid  {
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: none;
+}
+	.fix {
+		width: 960px;
+}
+	.fluid	{
+		width: 90%;	
+		max-width: 1400px;
+}
+	.full {
+		width: 100%;
+		border-radius: 0!important; 
+		-moz-border-radius: 0!important; 
+		-webkit-border-radius: 0!important;
+		-khtml-border-radius: 0!important;		
+}
+
+/*  :: layout-3-3 ::::::::::::::::::::::::::::::::::::*/
+
+	.layout-3-3 {
+		clear:both;
+		overflow:hidden;		
+}
+	.layout-3-3,
+	.layout-3-2,
+	.layout-3-1,
+	.col1,
+	.col2,
+	.col3 {
+		width:100%;				
+		float:left;
+		position:relative;
+}
+	.col1,
+	.col2,
+	.col3 {
+		padding:0;		/* no left and right padding */
+		overflow:hidden;
+}
+
+/*  :: layout-3-3 - content-left :::::::::::::::::::::*/
+	
+	.content-left .layout-3-1,
+	.content-left .layout-3-2 { 
+		right:25%; 
+}
+	.content-left .col1 { 
+		width:50%; 
+}
+	.content-left .col2,
+	.content-left .col3 { 
+		width:25%; 
+}
+	.content-left .col1,
+	.content-left .col2,
+	.content-left .col3 { 
+		left:50%;	 
+}		
+
+/*  :: layout-3-3 - content-center :::::::::::::::::*/
+
+	.content-center .layout-3-1 { 
+		right:50%; 
+}	
+	.content-center .layout-3-2 { 
+		right:25%; 
+}
+	.content-center .col2 { 
+		width:50%; 
+}
+	.content-center .col1,
+	.content-center .col3 { 
+		width:25%; 
+}
+	.content-center .col1,
+	.content-center .col2,
+	.content-center .col3 { 
+		left:75%;	 
+}		
+
+/*  :: layout-3-3 - content-right :::::::::::::::::::*/
+	
+	.content-right .layout-3-1 	{ 
+		right:25%; 
+}	
+	.content-right .layout-3-2 { 
+		right:25%; 
+}
+	.content-right .col1,
+	.content-right .col2 { 
+		width:25%; 
+}
+	.content-right .col3 { 
+		width:50%; 
+}
+	.content-right .col1,
+	.content-right .col2,
+	.content-right .col3 { 
+		left:50%;	 
+}		
+
+/* ===============================================================================================================================
+   	@header
+   =============================================================================================================================== */
+
+	#header {
+		position:relative;
+		top:0;
+		left:0;
+		right:0;
+		z-index:5000;	
+}
+	.header-row { 
+		position:relative; 
+}
+	#header h1 {
+		position: relative;
+		float: left;
+		width:220px; 
+		font-size: 60px;
+		height: 1em;
+		line-height: 1;
+		z-index: 2;
+}
+	#header .logo-algoritmi { 
+		background-image: url('/images/logo-algoritmi.png');
+		background-size: auto auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%; 
+		width:100%;  
+		height: 100%; 
+		text-indent:100%;
+		overflow:hidden;
+		display:block; 
+}
+
+/* ===============================================================================================================================
+   	@nav-primary
+   =============================================================================================================================== */
+
+	.nav-primary {
+		margin:0;
+		float:left;
+		height: 60px;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+}
+	.nav-primary > li {
+		height: 100%;
+		display: block;
+		float: left;
+		margin: 0px;
+}
+	.nav-primary > li:first-child > a {
+		background: url('../images/bg/shadow.png') no-repeat scroll 0% 0% transparent;
+		background-position: 0px 0px;
+		border-left:none;
+		padding-left: 2em;
+}
+	.nav-primary > li > a {	
+		display: block;
+		font-size: 16px;
+		line-height: 60px;
+		height: 100%;
+		padding: 0px 2em;
+		width: 100%;
+		height: 100%;
+		color:#7c8892;
+		font-weight:300;		
+		box-shadow: -1px 0 0 rgb(255, 255, 255) inset;
+}
+	.nav-primary a {
+		transition: color 0.2s ease 0s;
+		color: #677782;
+		display: block;
+		position: relative;
+		z-index: 1;
+}
+	.nav-primary li a:hover,
+	.nav-primary li a.active {
+		color:#3498db;
+		box-shadow: 0px 8px 10px #EBEBEB inset, 4px 35px 65px 5px rgba(242, 242, 242, 0.9) inset;
+}
+
+/* ===============================================================================================================================
+   	@nav-secondary
+   =============================================================================================================================== */
+	
+	.nav-secondary {
+		float:right;
+		height:30px;
+		line-height:30px;
+}
+	.nav-secondary { 
+		margin:0; 
+		padding:0; 
+}
+	.nav-secondary li {
+		text-align:center;
+		display:block;
+		float:left;
+}
+	.nav-secondary a {
+		color: #BCDCED;
+		display: block;
+}
+	.nav-secondary a:focus, 
+	.nav-secondary a:hover {
+    	color: #FFF;
+}	
+	.nav-secondary-text a {
+		background-color: transparent;
+		padding: 0px 1.3em;
+}
+	.nav-secondary-text-accedi {
+		transition: #6363CE 0.3s ease 0s;
+		background: none repeat scroll 0% 0% #2980b9;
+		text-transform: uppercase;
+		width: 130px;
+		font-weight:bold;
+}
+	.nav-secondary-text-accedi a { 
+		color:#ffffff; 
+}
+	.nav-secondary-text-accedi a:hover { 
+		background: none repeat scroll 0% 0% #0F95D3;
+}  
+	.nav-secondary-icon-social + .nav-secondary-text {
+    	margin-left: 0.5em;
+}
+	.nav-secondary-icon-social {
+		width:2.5em;
+}
+
+/* ===============================================================================================================================
+   	@search
+   =============================================================================================================================== */
+	
+	#navigation-bar {
+		position: absolute;
+		right:0;
+		top:0; 
+		height: 60px;
+		padding-left: 60px;
+}
+	#search {
+		position: relative;
+		float: left;
+		width: 510px;
+		height: 60px;
+		margin-left: -60px;
+}
+	#label {
+		background: url('../images/bg/shadow.png') no-repeat scroll 0% 0% transparent;
+		background-position: 0px 0px;
+		left:450px;
+		width: 60px;
+		height: 60px;
+		position: relative;
+		z-index: 20;
+}
+	#label .icon-search {
+		display: block;
+		width: 60px;
+		height: 60px;
+		font-size: 30px;
+		text-align:center;
+		line-height:60px;
+		cursor: pointer;
+}
+	#input {
+		position: absolute;
+		top: 0;
+		right: 60px;
+		width: 450px;
+		height: 60px;
+		z-index: 5;
+		overflow: hidden;
+}
+	#input input {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -510px;
+		width: 450px;
+		height: 100%;
+		margin: 0;
+		padding: 0 10px;
+		border: none;
+		background-color: #23688b;
+		color: #fff;
+		font-size: 18px;
+		-webkit-backface-visibility: none;
+		-moz-backface-visibility: none;
+		-ms-backface-visibility: none;
+		backface-visibility: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-transition: right 0;
+		-moz-transition: right 0;
+		-ms-transition: right 0;
+		-o-transition: right 0;
+		transition: right 0;
+}
+	#input input:focus {
+		outline: none
+}
+	#input.focus {
+		z-index: 20
+}
+	#input.focus input {
+		right: 0;
+		-webkit-transition: right 0.3s;
+		-moz-transition: right 0.3s;
+		-ms-transition: right 0.3s;
+		-o-transition: right 0.3s;
+		transition: right 0.3s;
+}
+
+/* ===============================================================================================================================
+   	@nav-toggle
+   =============================================================================================================================== */
+
+	#nav-toggle {
+		display:none;
+		float: right; 
+		height: inherit; 
+		overflow:hidden;  
+}
+	.nav-toggle {
+	    position: relative;
+		float:right;
+		padding: 11px 10px;
+	    margin: 11px 20px 0 0; 
+		color: #bdc3c7;
+	    background-color: rgba(255, 255, 255, 0.99);
+	    background-image: none;
+	    border: 1px solid rgba(0, 0, 0, 0.1);
+}	
+	.nav-toggle .icon-bar {
+		background: none repeat scroll 0 0 rgba(00, 00, 00, 0.40);
+	    display: block;
+	    height: 2px;
+	    width: 18px;
+}
+	.nav-toggle .icon-bar + .icon-bar {
+    	margin-top: 4px;
+}
+	.sr-only {
+	    border: 0 none;
+	    clip: rect(0px, 0px, 0px, 0px);
+	    height: 1px;
+	    margin: -1px;
+	    overflow: hidden;
+	    padding: 0;
+	    position: absolute;
+	    width: 1px;
+}
+
+/* ===============================================================================================================================
+   	@BANNER
+   =============================================================================================================================== */	
+
+	.banner {
+		position:relative;	
+		text-align:center; 
+		display:block; 
+		color:inherit;
+		height:220px;
+		z-index:1;
+		background: rgb(255,255,255);
+	-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+	   -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+			box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+	.banner figure {
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		z-index:2; 
+}
+	.banner article  {
+		position:absolute;
+		bottom:7%;
+		width:80%;
+		margin:0 10%;
+		z-index:3; 
+}
+	.banner h1, .banner h2, .banner h3, .banner h4, .banner h5, .banner h6,
+	.banner .h1, .banner .h2, .banner .h3, .banner .h4, .banner .h5, .banner .h6 { 
+		margin-bottom:5px; 
+}
+	.banner p { 
+		margin:5px 0; 
+		line-height:1.2em; 
+}
+
+	.cd  { 
+		display: block; 
+		width: 100%;
+		height:100%;
+		-moz-border-bottom-colors: none; 
+		-moz-border-left-colors: none; 
+		-moz-border-right-colors: none; 
+		-moz-border-top-colors: none; 
+		border-color: #EFEFEF #E0E0E0 #CCCCCC;
+		border-image: none;
+		border-left: 1px solid #E0E0E0;
+		border-right: 1px solid #E0E0E0;
+		border-style: solid;
+		border-width: 1px;
+}
+	.cd:nth-child(n) { 
+		-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.22); 
+		-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.22); 
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.22); 
+		border: medium none;
+		border-radius: 100% 100% 100% 100% / 33px 33px 33px 33px; 
+}
+ 
+
+/* ===============================================================================================================================
+   	:: BILLBOARD
+   =============================================================================================================================== */	
+	
+	.billboard { 
+		position:relative; 
+		width:100%;
+		height: 100%;
+		overflow:hidden;		
+		animation: 800ms ease-out 0s normal none 1 fadeIn; 
+	}
+	
+	.billboard figure {
+		position: absolute;	 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		animation: 800ms ease-out 0s normal none 1 rotateFade;
+}		
+	.billboard p 		{ margin-top: 1em; }
+	.billboard .cta 	{ margin-top: 2em; }
+	.billboard p a 		{ color: inherit; text-decoration: underline; }
+
+/* ===============================================================================================================================
+   	:: TILES
+   =============================================================================================================================== */	
+
+	.tile { 		
+		position:relative;
+		overflow:hidden;
+		display:block;
+		width:100%;
+}
+	.tile figure { 
+		text-align:center; 
+}
+	.tile article, 
+	.tile figure { 
+		padding:25px; 
+		height:220px;
+}
+	.tile.x2 article { 
+		margin-left:50%; 
+}	
+	.tile.x2 figure {
+		width:50%;
+		float:left;
+}
+	.col-03 .tile figure img { 
+		max-height:170px;
+}
+	.col-06 .x2 figure img { 
+		max-height:250px; 
+}
+	.col-06 .y2 figure { 
+		min-height:454px; 
+}
+
+	
+/* ===============================================================================================================================
+   	SOFTWARE	
+   =============================================================================================================================== */	
+
+/*  :: Call-Center :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	
+	.banner.call-center figure img { width:70%; margin:-9px -130px 0 0; }
+	.banner.call-center article { text-align:left; top:10%; width:70%; margin: 0 20% 0 10%; }
+
+
+/*  :: Backup online :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	
+	.backup-online { 
+		background: url('http://www.algoritmi.com/servizi/backup-online/images/bg-backup-online.jpg') no-repeat scroll 0% 0% / cover #FFF;
+}
+	.banner.backup-online figure img 		{ width:36%; margin:5% 32% 0; }
+	.banner.backup-online.v2 figure img 	{ width:60%; margin:0 20%; position:absolute; left:0; right:0; bottom:-10%; }
+	.banner.backup-online.v2 article		{ top:10%; }	
+	
+/*  :: Fattura Elettronica :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	
+	.fattura-elettronica { 
+		background: rgba(71,162,215,1);
+		background: -moz-linear-gradient(top, rgba(71,162,215,1) 0%, rgba(10,116,173,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,162,215,1)), color-stop(100%, rgba(10,116,173,1)));
+		background: -webkit-linear-gradient(top, rgba(71,162,215,1) 0%, rgba(10,116,173,1) 100%);
+		background: -o-linear-gradient(top, rgba(71,162,215,1) 0%, rgba(10,116,173,1) 100%);
+		background: -ms-linear-gradient(top, rgba(71,162,215,1) 0%, rgba(10,116,173,1) 100%);
+		background: linear-gradient(to bottom, rgba(71,162,215,1) 0%, rgba(10,116,173,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47a2d7', endColorstr='#0a74ad', GradientType=0 );
+}
+	.banner.fattura-elettronica { color:#ffffff; }
+	.banner.fattura-elettronica figure img { width:50%; margin:5% 0 0 25%; }	
+
+	.billboard.fattura-elettronica { padding: 130px 0px 80px 45%; }
+	.billboard.fattura-elettronica figure { margin-left:-450px; }
+	.billboard.fattura-elettronica article { color:#ffffff; }
+
+/*  :: Firma Grafometrica :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.firma-grafometrica figure img { position:absolute; bottom:-20%; right:0; width:80%; margin-left:0 0 0 20%; }
+	.banner.firma-grafometrica article { top:10%; } 
+
+/*  :: Fiscal Assist :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.fiscal-assist figure img { position:absolute; bottom:5%; left:0; width:80%; margin:0 10%; }
+	.banner.fiscal-assist article { top:10%; } 
+	
+/*  :: Gamma App :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.gamma-app figure img { position:absolute; bottom:5%; left:0; width:70%; margin:0 15%; }
+	.banner.gamma-app article { top:10%; } 
+
+/*  :: Gecom App :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.gecom-app figure { overflow:hidden; }
+	.banner.gecom-app figure img { height:100%; }
+	.banner.gecom-app article { 
+		background: none repeat scroll 0% 0% rgba(250, 250, 250, 0.35); 
+		width:100%; 
+		margin:0; 
+		padding:3% 10%;
+		bottom:1px; 
+}
+
+/*  :: Postino Telematico :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.postino-telematico { 
+		background: url('/software/postino-telematico/images/bg.png') no-repeat scroll 50% 50% / cover #FFF;
+}
+	.banner.postino-telematico figure img { width:76%; margin:5% 24% 0 0; }
+	.billboard.postino-telematico { padding: 150px 0px 80px 50%; }
+	.billboard.postino-telematico figure { margin-left:-450px; margin-top:-70px; }
+
+/*  :: Recruitment :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.recruitment figure img { position:absolute; bottom:0; left:0; width:100%; margin:0; }
+	.banner.recruitment article { top:10%; }
+
+/*  :: Sistemi informatici :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	
+	.banner.sistemi-informatici img { position:absolute; bottom:0; left:0; width:100%; margin:0; }
+	.banner.sistemi-informatici article { text-align:left; top:10%; }
+
+/*  :: Tustena CRM :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	
+	.tustena-crm { 
+	  background: url('/software/tustena-crm/images/bg.png') no-repeat scroll 50% 50% / cover #FFF;
+}
+	.banner.tustena-crm { color:#ffffff; }
+	.banner.tustena-crm .cta { display:none; }
+	.banner.tustena-crm figure img { width:34%; margin:5% 32% 0; }
+
+	.billboard.tustena-crm { padding: 120px 0px 80px 50%; color:#ffffff; }
+	.billboard.tustena-crm figure { margin-left:-450px; }
+	.billboard.tustena-crm figure img { width:350px; }
+	
+/*  :: WDD :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.banner.wdd figure { overflow:hidden; }
+	.banner.wdd figure img { position:absolute; top:-35%; left:0; }
+	.banner.wdd article { top:10%; }
+
+
+/* ===============================================================================================================================
+   	@footer
+   =============================================================================================================================== */	
+
+	#footer .inner { 
+		position:relative; 
+		height:100%; 
+}
+/*  :: footer-action :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	#footer-action {
+		position:relative;
+		overflow:hidden;
+		padding:30px 0 20px; 
+}
+	#footer-action .heading {
+		font-weight:700;
+		color:#ffffff; 
+}
+	#footer-action .socialize {
+		margin:0 30px 0 0;
+		padding:0;
+		color:#ffffff; 
+}
+	#footer-action .social-link {
+		padding:10px 0;
+		border-bottom:1px solid #34495e;
+}
+	#footer-action .social-link li,
+	#footer-action .smart-link li {
+		display:block;
+		line-height:2;
+		margin:.75em 0;
+}
+	#footer-action .social-link li a[class*="icon-"]:before {
+		background: none repeat scroll 0% 0% #34495e;
+		border-radius: 100%;
+		color: #FFF;
+		display: inline-block;
+		height: 32px;
+		line-height: 32px;
+		margin-right: 0.5em;
+		text-align: center;
+		text-indent: 2px;
+		width: 32px;
+}
+	#footer-action .social-link li a,
+	#footer-action .smart-link li a {
+		color: #BCDCED;
+}
+	#footer-action .social-link li a:focus, 
+	#footer-action .social-link li a:hover,
+	#footer-action .smart-link li a:focus, 
+	#footer-action .smart-link li a:hover	 {
+    	color: #FFF;
+}	
+
+/*  :: footer-legal :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	#footer-legal {
+		position:absolute;
+		width:100%;
+		bottom:0;
+		height:70;
+		line-height:70px;
+}
+	#footer-legal .footer-copy {
+		float:left;
+		text-align:left;
+		padding-left:30px;
+		padding-right:10px;
+}	
+	#footer-legal .footer-nav {
+		float:left;
+		width:auto;
+		margin:0 auto;
+}
+	#footer-legal .footer-nav li {
+		padding:0 10px;
+		width:auto;
+		display:inline;
+}
+	#footer-legal .footer-logo {
+		position: relative;
+		font-size: 70px;
+		line-height: 1;
+		float: right;
+		height: 70px;
+		width: 265px;
+		margin-right:30px; 
+}
+	#footer-legal .logo-teamsystem { 
+		background-image: url('/images/logo-teamsystem.png');
+		background-size: auto auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%; 
+		width:100%;  
+		height: 100%; 
+		text-indent:100%;
+		overflow:hidden;
+		display:block; 
+}
+	
+
