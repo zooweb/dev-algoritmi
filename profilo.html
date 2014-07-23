@@ -33,40 +33,39 @@
 </head>
 
 <body><!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
-<div id="container">
+<div id="rack">
     
     <!-- :: HEADER :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-    <header id="header" class="bg-00 sb">
-        <hgroup>            
-            <div class="header-row bg-midnight-blue clearfix">
-                <ul class="nav-secondary">
-                    <li class="nav-secondary-icon-social"><a class="icon-facebook" href="#"><span class="screen-reader">Youtube</span></a></li>
-                    <li class="nav-secondary-icon-social"><a class="icon-twitter" href="#"><span class="screen-reader">Youtube</span></a></li>
-                    <li class="nav-secondary-icon-social"><a class="icon-linkedin" href="#"><span class="screen-reader">Youtube</span></a></li>
-                    <li class="nav-secondary-icon-social"><a class="icon-youtube" href="#"><span class="screen-reader">Youtube</span></a></li>
-                    <li class="nav-secondary-text"><a href="profilo.html">Profilo</a></li>
-                    <li class="nav-secondary-text-accedi"><a href="login.html"><i class="fa fa-lock fa-fw"></i> Accedi</a></li>
-                    <li class="nav-secondary-text"><a href="contatti.html">Contatti</a></li>
-                </ul>
+    <header id="header" class="sb">
+        <div id="header-first" class="bg-midnight-blue clearfix">
+            <nav class="nav-secondary"><ul class="nav-inline"><li>
+                <a class="icon-facebook" href="#"><span class="screen-reader">Facebook</span></a></li><li>
+                <a class="icon-twitter" href="#"><span class="screen-reader">Twitter</span></a></li><li>
+                <a class="icon-linkedin" href="#"><span class="screen-reader">Linked In</span></a></li><li>
+                <a class="icon-youtube" href="#"><span class="screen-reader">Youtube</span></a></li><li>
+                <a class="text-profilo" href="profilo.html">Profilo</a></li><li>
+                <a class="text-accedi" href="login.html"><i class="fa fa-lock fa-fw"></i> Accedi</a></li><li>
+                <a class="text-contatti" href="contatti.html">Contatti</a></li></ul>
+            </nav>
+        </div>
+        <div id="header-second" class="clearfix">    
+            <h1 class="logo"><a href="/" class="logo-algoritmi" title="ALGORITMI Software per professionisti e aziende">Algoritmi</a></h1>
+            <nav class="nav-primary"><ul class="nav-inline"><li>
+                <a href="software.html">Software</a></li><li>
+                <a href="servizi.html">Servizi</a></li><li>
+                <a href="eventi.html">Eventi</a></li></ul>
+            </nav>    
+            <nav id="nav-toggle" class="hide">
+            	<a class="nav-toggle"href="" ><span class="sr-only">Men&ugrave;</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+            </nav>
+            <div id="nav-search" class="clearfix">
+                <form id="" action="#" method="post">
+                   <div id="input"><input type="text" name="" id="" placeholder="Cosa stai cercando?"></div>
+                   <div id="label"><label for="search-terms" id="search-label" class="icon-search"><span class="screen-reader">Cerca</span></label></div>
+                </form>                
             </div>
-            
-            <div class="header-row clearfix">    
-                <nav id="nav-toggle" class="hide"><a class="nav-toggle"href="" ><span class="sr-only">Men&ugrave;</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></nav>                    
-                <h1 class="logo"><a href="/" class="logo-algoritmi" title="ALGORITMI Software per professionisti e aziende">Algoritmi</a></h1>
-                <ul class="nav-primary"><li>
-                    <a href="software.html">Software</a></li><li>
-                    <a href="servizi.html">Servizi</a></li><li>
-                    <a href="eventi.html">Eventi</a></li>
-                </ul>
-                <div id="navigation-bar" class="clearfix">
-                    <form id="search" action="#" method="post">
-                        <div id="label"><label for="search-terms" id="search-label" class="icon-search"><span class="screen-reader">Cerca</span></label></div>
-                        <div id="input"><input type="text" name="search-terms" id="search-terms" placeholder="Cosa stai cercando?"></div>
-                    </form>                
-                </div>
-            </div>
-        </hgroup>
+        </div>
     </header>
 
     <!-- :: BODY :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
@@ -74,29 +73,29 @@
     <div id="body">
     
 		<section class="section text-center bg-white">
-        	<div class="wrap">
+        	<div class="wrap fluid">
                 <h1>ALGORITMI</h1>
-                <h3>Software e servizi per professionisti e aziende</h3>
-                <p class="lead">Commercialisti, consulenti del lavoro, avvocati e aziende.</p>
+                <h2>Software e servizi per professionisti, commercialisti, consulenti del lavoro, avvocati, e aziende</h2>
+                <p class="lead">Il lorem ipsum è un insieme di parole utilizzato da grafici, designer, programmatori e tipografi come testo riempitivo in bozzetti e prove grafiche[1]. È un testo privo di senso, composto da parole in lingua latina (spesso storpiate), riprese pseudocasualmente da uno scritto di Cicerone del 45 a.C.</p>
         	</div>
         </section>
 
 		<section class="section bg-peter-river text-white text-center">
         	<div class="fluid">
                 <ul class="row xxxxx">
-                	<li class="col-03">
+                	<li class="col-00">
                     	<h2>1986</h2>
                         <p>Nasce Algoritmi e il computer più diffuso era il Commodore 64. Microsoft Windows era appena nato.</p>
                     </li>
-                    <li class="col-03">
+                    <li class="col-00">
                     	<h2>25</h2>
                         <p>Da 25 anni Algoritmi è leader in Sicilia nelle soluzioni software per professionisti e aziende.</p>                    
                     </li>
-                	<li class="col-03">
+                	<li class="col-00">
                     	<h2>1000</h2>
                         <p>Mille clienti attivi distribuiti in otto province testimoniano il successo dalle radici profonde.</p>
                     </li>
-                    <li class="col-03">
+                    <li class="col-00">
                    		<h2>27</h2>
                         <p>Collaboratori, tutti professionisti di talento che dall'inizio partecipano alla crescita dell'azienda.</p> 
                     </li>
@@ -106,93 +105,26 @@
         
         <section class="">        
     		<div class="">
+            
             	<ul class="row tiles grid">
                 	<li class="col-00">
                         <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
+                        	<figure class=""><img src="images/logo-microsoft.png" class="hero"></figure>
                         </section>
                     </li>
                 	<li class="col-00">
                         <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
+                        	<figure class=""><img src="images/logo-dell.png" class="hero"></figure>
                         </section>
                     </li>
                 	<li class="col-00">
                         <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
+                        	<figure class=""><img src="images/logo-ibm.png" class="hero"></figure>
                         </section>
                     </li>
                 	<li class="col-00">
                         <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
-                        </section>
-                    </li>
-                	<li class="col-00">
-                        <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
-                        </section>
-                    </li>
-                	<li class="col-00">
-                        <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
-                        </section>
-                    </li>
-                	<li class="col-00">
-                        <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
-                        </section>
-                    </li>
-                	<li class="col-00">
-                        <section class="tile">
-                        	<figure class=""><img src="software/postino-telematico/images/hero.png" class="hero"></figure>
-                            <article class="">
-                                <h4><strong>La corrispondenza parte digitale e arriva cartacea</strong></h4>
-                                <h6>Spedire <strong>con un click</strong></h6>
-                                <p>Grazie alla tavoletta grafica certificata puoi firmare in digitale i tuoi documenti elettronici.</p>
-                                <div class="cta hide"><a href="#" class="btn btn-default">Maggiori informazioni</a></div>
-                            </article>
+                        	<figure class=""><img src="images/logo-hp.png" class="hero"></figure>
                         </section>
                     </li>
                 </ul>

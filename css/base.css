@@ -116,10 +116,8 @@
 		line-height: inherit;
 }
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-		margin:0;
-		font-size:1em;
 		color: inherit;
-		line-height:1.1;
+		line-height: inherit;
 		font-family: inherit;
 		font-weight: inherit;		
 }
@@ -381,7 +379,7 @@
 	.xxxx 			{ margin-left:-4%; }	
 	.xxxxx 			{ margin-left:-5%; }
 
-	[class*='col-'] { float: left; display:inline; min-height: 1px; width:100%; /* margin-top:1.5em;*/ }
+	[class*='col-'] { float: left; display:inline; min-height: 1px; width:100%; }
 		
 	.col-00	{ width:25%; }
 	.col-01 { width: 8.33333%; }         
@@ -397,7 +395,7 @@
     .col-11 { width: 91.66667%; }
     .col-12 { width: 100%; } 
 	
-	.x [class*='col-'] { margin-left:1%; margin-top:1%;  }
+	.x [class*='col-'] { margin-left:1%; }
 
 	.x .col-00 { width:24%; }
 	.x .col-01 { width: 7.33333%; }         
@@ -413,7 +411,7 @@
     .x .col-11 { width: 90.66667%; }
     .x .col-12 { width: 99%; } 
 
-	.xx [class*='col-'] { margin-left:2%; margin-top:2%; }
+	.xx [class*='col-'] { margin-left:2%; }
 
 	.xx .col-00 { width:23%; }
 	.xx .col-01 { width: 6.33333%; }         
@@ -429,7 +427,7 @@
     .xx .col-11 { width: 89.66667%; }
     .xx .col-12 { width: 98%; } 
 	
-	.xxx [class*='col-'] { margin-left:3%; margin-top:3%; }
+	.xxx [class*='col-'] { margin-left:3%; }
 
 	.xxx .col-00 { width: 22%; }
 	.xxx .col-01 { width: 5.33333%; }         
@@ -445,7 +443,7 @@
     .xxx .col-11 { width: 88.66667%; }
     .xxx .col-12 { width: 97%; } 
 
-	.xxxx [class*='col-'] { margin-left:4%; margin-top:4%; }
+	.xxxx [class*='col-'] { margin-left:4%; }
 
 	.xxxx .col-00 { width:21%; }
 	.xxxx .col-01 { width: 4.33333%; }         
@@ -461,7 +459,7 @@
     .xxxx .col-11 { width: 87.66667%; }
     .xxxx .col-12 { width: 96%; } 
 	
-	.xxxxx [class*='col-'] { margin-left:5%; margin-top:5%; }
+	.xxxxx [class*='col-'] { margin-left:5%; }
 
 	.xxxxx .col-00 { width:20%; }
 	.xxxxx .col-01 { width: 3.33333%; }         
@@ -2495,14 +2493,13 @@
 
 	[class*='icon-'] { 
 		position:relative;
-		font-size:16px; 
 }
 	[class*='icon-']:before {	
 		font-family: FontAwesome;
 		font-style: normal;
 		font-weight: normal;
 		text-decoration: inherit;
-}
+}	
 	.icon-facebook:before {
 		content:"\f09a";
 }

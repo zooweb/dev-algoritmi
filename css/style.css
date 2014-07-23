@@ -6,15 +6,7 @@
 		
 */
 	@import url(http://fonts.googleapis.com/css?family=Lato:700,400,300,200);	
-
-/* ===============================================================================================================================
-   	@Hidden
-   =============================================================================================================================== */
-	
-	#notification,
-	#loading-bar { 
-		display:none; 
-}
+	@import url(header.css);	
 
 /* ===============================================================================================================================
    	@Global
@@ -26,10 +18,15 @@
 	body {
 		font-family: "Lato", Helvetica, Arial;
 		color: rgb(52, 73, 94);
-		font-size:14px;
+		font-size:1em;
 		line-height:1.4;
 		font-weight:200;
 }
+
+/* ===============================================================================================================================
+   	@tipografia
+   =============================================================================================================================== */
+
 	a { 
 		color: #3498db;
 		-webkit-transition: 0.25s;
@@ -42,56 +39,38 @@
 		color: #0992d0; 
 		transition: border-color 0.2s ease 0s, background-color 0.2s ease 0s, color 0.2s ease 0s;
 }
-	legend {
-		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95); 
-}
-	fieldset { 
-		background: none repeat scroll 0 0 rgba(243, 244, 245, 0.98); 
-}
-
-/* ===============================================================================================================================
-   	@Sticky Footer
-   =============================================================================================================================== */
-
-	#container {
-		min-height:100%;
-		position:relative;
-}
-	#body {
-		padding-bottom:650px; 	/* Stessa altezza di #footer */
-}
-	#footer {
-		position:absolute;
-		bottom:0;		
-		width:100%;
-		height:650px;		 	/* Altezza del footer*/
-}
-
-/* ===============================================================================================================================
-   	@tipografia
-   =============================================================================================================================== */
-	
-	h1, .h1 { font-size:72px; }
-	h2, .h2 { font-size:60px; }
-	h3, .h3 { font-size:48px; }
-	h4, .h4 { font-size:28px; }
-	h5, .h5 { font-size:20px; font-weight:300; }
-	h6, .h6 { font-size:15px; font-weight:400; }
+	h1, .h1 { font-size:60px; font-size:3.750rem; }
+	h2, .h2 { font-size:50px; font-size:3.125em; }
+	h3, .h3 { font-size:40px; font-size:2.500em; }
+	h4, .h4 { font-size:30px; font-size:1.875em; }
+	h5, .h5 { font-size:20px; font-size:1.250em; }
+	h6, .h6 { font-size:16px; font-size:1.000em; }
+	p 		{ font-size:12px; font-size:0.875rem;}
 	
 	h1, h2, h3 { 
 		letter-spacing:-2px; 
 }
 	h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
-		margin-bottom:.75em; 
+		margin-bottom:10px; 
 }
-	p { margin:1.5em 0; }
-	
+	p { margin:1.5rem 0; }
+
+	p.lead {
+		font-size:21px;
+		line-height:1.4;
+}
 	ul, ol { 
 		margin-bottom:1.5em; 
+}
+	nav ul, nav ol { 
+		margin:0; 
 }
 	hr {
 		border-top:1px solid #eee
 }
+
+/*  :: blockquote ::::::::::::::::::::::::::::::::::::*/
+
 	blockquote, q {
 		quotes: none;
 }
@@ -128,93 +107,58 @@
 		background-color:#d5eafc;
 		text-shadow:0 1px 0 #fff
 }
-	.page-header {
-		font-weight:700;
-		padding:.75em 0 .375em;
-		border-bottom:1px solid #dadada;
-}	
-	p.lead {
-		font-size:21px;
-		line-height:1.4;
-}
 
+/*  :: form ::::::::::::::::::::::::::::::::::::*/
 
-/* ===============================================================================================================================
-   	@Form
-   =============================================================================================================================== */
-
-	output {
-		color: #555555;
-		font-size: 14px;
-		padding-top: 7px;
-		line-height: 1.428571429;
+	fieldset { 
+		background: none repeat scroll 0 0 rgba(243, 244, 245, 0.98); 
 }
 	legend {
 		color: #333333;
 		font-size: 21px;
 		margin-bottom: 1.5em;
 		border-bottom: 1px solid #e5e5e5;
+		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
 }
 	label {
 		font-weight: bold;
 		margin-bottom: 5px;
 }	
+	output {
+		color: #555555;
+		font-size: 14px;
+		padding-top: 7px;
+		line-height: 1.428571429;
+}
+	
 	-webkit-input-placeholder { color: #8a8a8a; } /* Safari */
 		-ms-input-placeholder { color: #8a8a8a; } /* ie */
 			 -moz-placeholder { color: #8a8a8a; } /* firefox 19+ */
 	   input:-moz-placeholder { color: #8a8a8a; }
 
-/*  :: section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-	.section { 
-		padding-top:3em;
-		padding-bottom:3em;
-		position:relative; 
+/* ===============================================================================================================================
+   	Layout & Sticky Footer
+   =============================================================================================================================== */
+
+	#rack {
+		position:relative;
+		min-height:100%;
 }
-
-/*  :: divider :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-
-	.divider {
-		width:100%;		
+	#header {
+		position:relative;
+		z-index:10;
+}
+	#body {
+		padding-bottom:650px; 	/* Stessa altezza di #footer */
+		z-index:2;
+}
+	#footer {
 		position:absolute;
-		background-repeat: no-repeat;
-		background-position: 50% 0;
+		height:650px;		 	/* Altezza del footer*/
+		width:100%;
+		bottom:0;		
 }
-	.divider.up {
-		bottom:0;
-		height: 62px;
-		background-image: url('../images/bg/divider-up.png');
-}
-	.divider.down {
-		top:0;
-		height: 62px;
-		background-image: url('../images/bg/divider-down.png');
-}
-	.divider.line {
-		height: 1px;
-		background-image: url('../images/bg/divider-line.png');
-}
-
-/*  :: nest :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-
-	.nest {
-		position: absolute;
-		z-index: 1001;
-		top: 0px;
-		width: 106px;
-		height: 478px;
-		background-size: 106px 478px;
-		background-repeat: no-repeat;
-		background-position: 0px 0px;
-}
-	.nest.left {
-		left: 0px;
-		background-image: url('../images/bg/nest-left.png');
-}		
-	.nest.right {
-		right: 0px;
-		background-image: url('../images/bg/nest-right.png');
-}	
 
 /* ===============================================================================================================================
    	@Layout
@@ -325,31 +269,18 @@
 		left:50%;	 
 }		
 
+
 /* ===============================================================================================================================
-   	@header
+   	SHARED STYLE
    =============================================================================================================================== */
 
-	#header {
-		position:relative;
-		top:0;
-		left:0;
-		right:0;
-		z-index:5000;	
-}
-	.header-row { 
-		position:relative; 
-}
-	#header h1 {
+	.logo {
 		position: relative;
-		float: left;
-		width:220px; 
-		font-size: 60px;
-		height: 1em;
 		line-height: 1;
-		z-index: 2;
+		height: 1em;
+		float: left;
 }
-	#header .logo-algoritmi { 
-		background-image: url('/images/logo-algoritmi.png');
+	[class*='logo-'] { 
 		background-size: auto auto;
 		background-repeat: no-repeat;
 		background-position: 50% 50%; 
@@ -357,246 +288,97 @@
 		height: 100%; 
 		text-indent:100%;
 		overflow:hidden;
-		display:block; 
+		display:block; 		 
 }
-
-/* ===============================================================================================================================
-   	@nav-primary
-   =============================================================================================================================== */
-
-	.nav-primary {
-		margin:0;
-		float:left;
-		height: 60px;
-		position: relative;
-		text-transform: uppercase;
-		z-index: 1;
-}
-	.nav-primary > li {
-		height: 100%;
-		display: block;
-		float: left;
-		margin: 0px;
-}
-	.nav-primary > li:first-child > a {
-		background: url('../images/bg/shadow.png') no-repeat scroll 0% 0% transparent;
-		background-position: 0px 0px;
-		border-left:none;
-		padding-left: 2em;
-}
-	.nav-primary > li > a {	
-		display: block;
-		font-size: 16px;
-		line-height: 60px;
-		height: 100%;
-		padding: 0px 2em;
-		width: 100%;
-		height: 100%;
-		color:#7c8892;
-		font-weight:300;		
-		box-shadow: -1px 0 0 rgb(255, 255, 255) inset;
-}
-	.nav-primary a {
-		transition: color 0.2s ease 0s;
-		color: #677782;
-		display: block;
-		position: relative;
-		z-index: 1;
-}
-	.nav-primary li a:hover,
-	.nav-primary li a.active {
-		color:#3498db;
-		box-shadow: 0px 8px 10px #EBEBEB inset, 4px 35px 65px 5px rgba(242, 242, 242, 0.9) inset;
-}
-
-/* ===============================================================================================================================
-   	@nav-secondary
-   =============================================================================================================================== */
-	
-	.nav-secondary {
-		float:right;
-		height:30px;
-		line-height:30px;
-}
-	.nav-secondary { 
-		margin:0; 
-		padding:0; 
-}
-	.nav-secondary li {
+	.nav-inline {
+		position:relative;
 		text-align:center;
+		overflow:hidden;
+		width:100%;
+		clear:both;
+}
+	.nav-inline li {
+		display:inline;
+		float:left;
+}
+	.nav-inline li a {
 		display:block;
-		float:left;
 }
-	.nav-secondary a {
-		color: #BCDCED;
-		display: block;
-}
-	.nav-secondary a:focus, 
-	.nav-secondary a:hover {
-    	color: #FFF;
-}	
-	.nav-secondary-text a {
-		background-color: transparent;
-		padding: 0px 1.3em;
-}
-	.nav-secondary-text-accedi {
-		transition: #6363CE 0.3s ease 0s;
-		background: none repeat scroll 0% 0% #2980b9;
-		text-transform: uppercase;
-		width: 130px;
-		font-weight:bold;
-}
-	.nav-secondary-text-accedi a { 
-		color:#ffffff; 
-}
-	.nav-secondary-text-accedi a:hover { 
-		background: none repeat scroll 0% 0% #0F95D3;
-}  
-	.nav-secondary-icon-social + .nav-secondary-text {
-    	margin-left: 0.5em;
-}
-	.nav-secondary-icon-social {
-		width:2.5em;
-}
-
-/* ===============================================================================================================================
-   	@search
-   =============================================================================================================================== */
-	
-	#navigation-bar {
-		position: absolute;
-		right:0;
-		top:0; 
-		height: 60px;
-		padding-left: 60px;
-}
-	#search {
-		position: relative;
-		float: left;
-		width: 510px;
-		height: 60px;
-		margin-left: -60px;
-}
-	#label {
-		background: url('../images/bg/shadow.png') no-repeat scroll 0% 0% transparent;
-		background-position: 0px 0px;
-		left:450px;
-		width: 60px;
-		height: 60px;
-		position: relative;
-		z-index: 20;
-}
-	#label .icon-search {
-		display: block;
-		width: 60px;
-		height: 60px;
-		font-size: 30px;
-		text-align:center;
-		line-height:60px;
-		cursor: pointer;
-}
-	#input {
-		position: absolute;
-		top: 0;
-		right: 60px;
-		width: 450px;
-		height: 60px;
-		z-index: 5;
-		overflow: hidden;
-}
-	#input input {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: -510px;
-		width: 450px;
+	.billboard,
+	.catalogo,
+	.item,
+	.tile { 
+		position:relative; 
+		width:100%;
 		height: 100%;
-		margin: 0;
-		padding: 0 10px;
-		border: none;
-		background-color: #23688b;
-		color: #fff;
-		font-size: 18px;
-		-webkit-backface-visibility: none;
-		-moz-backface-visibility: none;
-		-ms-backface-visibility: none;
-		backface-visibility: none;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		border-radius: 0;
-		-webkit-transition: right 0;
-		-moz-transition: right 0;
-		-ms-transition: right 0;
-		-o-transition: right 0;
-		transition: right 0;
+		overflow:hidden;		
 }
-	#input input:focus {
-		outline: none
+	.section { 
+		padding-top:3em;
+		padding-bottom:3em;
+		position:relative; 
 }
-	#input.focus {
-		z-index: 20
+	.page-header {
+		font-weight:700;
+		padding:.75em 0 .375em;
+		border-bottom:1px solid #dadada;
+}	
+
+/* ===============================================================================================================================
+   	:: DIVIDER
+   =============================================================================================================================== */	
+
+	.divider {
+		width:100%;		
+		position:absolute;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
 }
-	#input.focus input {
-		right: 0;
-		-webkit-transition: right 0.3s;
-		-moz-transition: right 0.3s;
-		-ms-transition: right 0.3s;
-		-o-transition: right 0.3s;
-		transition: right 0.3s;
+	.divider.up {
+		bottom:0;
+		height: 62px;
+		background-image: url('../images/bg/divider-up.png');
+}
+	.divider.down {
+		top:0;
+		height: 62px;
+		background-image: url('../images/bg/divider-down.png');
+}
+	.divider.line {
+		height: 1px;
+		background-image: url('../images/bg/divider-line.png');
 }
 
 /* ===============================================================================================================================
-   	@nav-toggle
-   =============================================================================================================================== */
+   	:: NEST
+   =============================================================================================================================== */	
 
-	#nav-toggle {
-		display:none;
-		float: right; 
-		height: inherit; 
-		overflow:hidden;  
+	.nest {
+		position: absolute;
+		z-index: 1001;
+		top: 0px;
+		width: 106px;
+		height: 478px;
+		background-size: 106px 478px;
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
 }
-	.nav-toggle {
-	    position: relative;
-		float:right;
-		padding: 11px 10px;
-	    margin: 11px 20px 0 0; 
-		color: #bdc3c7;
-	    background-color: rgba(255, 255, 255, 0.99);
-	    background-image: none;
-	    border: 1px solid rgba(0, 0, 0, 0.1);
+	.nest.left {
+		left: 0px;
+		background-image: url('../images/bg/nest-left.png');
+}		
+	.nest.right {
+		right: 0px;
+		background-image: url('../images/bg/nest-right.png');
 }	
-	.nav-toggle .icon-bar {
-		background: none repeat scroll 0 0 rgba(00, 00, 00, 0.40);
-	    display: block;
-	    height: 2px;
-	    width: 18px;
-}
-	.nav-toggle .icon-bar + .icon-bar {
-    	margin-top: 4px;
-}
-	.sr-only {
-	    border: 0 none;
-	    clip: rect(0px, 0px, 0px, 0px);
-	    height: 1px;
-	    margin: -1px;
-	    overflow: hidden;
-	    padding: 0;
-	    position: absolute;
-	    width: 1px;
-}
 
 /* ===============================================================================================================================
    	:: BILLBOARD
    =============================================================================================================================== */	
 	
-	.billboard { 
-		position:relative; 
-		width:100%;
-		height: 100%;
-		overflow:hidden;		
+	.billboard { 	
 		animation: 800ms ease-out 0s normal none 1 fadeIn; 
-	}
-	
+}
 	.billboard figure {
 		position: absolute;	 
 		background-position: center center;
@@ -604,9 +386,79 @@
 		background-size: 100% auto;
 		animation: 800ms ease-out 0s normal none 1 rotateFade;
 }		
-	.billboard p 		{ margin-top: 1em; }
-	.billboard .cta 	{ margin-top: 2em; }
-	.billboard p a 		{ color: inherit; text-decoration: underline; }
+	.billboard p { 
+		margin-top: 1em; 
+}
+	.billboard p a { 
+		color: inherit; 
+		text-decoration: underline; 
+}
+	.billboard .cta { 
+		margin-top: 2em; 
+}
+
+/* ===============================================================================================================================
+   	:: TILES
+   =============================================================================================================================== */	
+	
+	.tile figure, .tile article {
+		margin:1.5em 0; 
+		padding:0 1.5em; 
+}
+	.tile figure { 
+		text-align:center; 
+}
+	.tile.x2 article { 
+		margin-left:50%; 
+}	
+	.tile.x2 figure {
+		width:50%;
+		float:left;
+}
+	.col-03 .tile figure img { 
+		max-height:170px;
+}
+	.col-06 .x2 figure img { 
+		max-height:250px; 
+}
+	.col-06 .y2 figure { 
+		min-height:454px; 
+}
+
+/* ===============================================================================================================================
+   	:: TILES-GRID
+   =============================================================================================================================== */	
+
+	.tiles.grid { 
+		border-top: 1px solid #dfdfdf; 
+		border-left:1px solid #dfdfdf; 
+}
+	.tiles.grid .tile { 
+		border-right:1px solid #dfdfdf; 
+		border-left:1px solid #ffffff;
+		border-top:1px solid #ffffff; 
+		border-bottom:1px solid #dfdfdf; 
+}
+
+/* ===============================================================================================================================
+   	:: ITEM
+   =============================================================================================================================== */	
+
+	.item {
+		float:left;
+		clear:both;
+}
+	.item figure { 
+		float:left;
+		margin-bottom:1px;
+		border-right:1px solid #f0f0f0; 
+}
+	.item article {
+		overflow:hidden;
+}
+	.item article p:last-child {
+		margin-bottom: 0;
+}
 
 /* ===============================================================================================================================
    	@BANNER
@@ -671,60 +523,32 @@
 		border: medium none;
 		border-radius: 100% 100% 100% 100% / 33px 33px 33px 33px; 
 }
-
-
-/* ===============================================================================================================================
-   	:: TILES
-   =============================================================================================================================== */	
-
-	.tile { 		
-		position:relative;
-		overflow:hidden;
-		display:block;
-		width:100%;
-}
-	.tile figure, .tile article {
-		margin:1.5em 0; 
-		padding:0 1.5em; 
-}
-	.tile figure { 
-		text-align:center; 
-}
-	.tile.x2 article { 
-		margin-left:50%; 
-}	
-	.tile.x2 figure {
-		width:50%;
-		float:left;
-}
-	.col-03 .tile figure img { 
-		max-height:170px;
-}
-	.col-06 .x2 figure img { 
-		max-height:250px; 
-}
-	.col-06 .y2 figure { 
-		min-height:454px; 
-}
-
-/* ===============================================================================================================================
-   	:: TILES-GRID
-   =============================================================================================================================== */	
-
-	.tiles.grid { 
-		border-top: 1px solid #dfdfdf; 
-		border-left:1px solid #dfdfdf; 
-}
-	.tiles.grid .tile { 
-		border-right:1px solid #dfdfdf; 
-		border-left:1px solid #ffffff;
-		border-top:1px solid #ffffff; 
-		border-bottom:1px solid #dfdfdf; 
-}
 	
-
-
-
+/* ===============================================================================================================================
+   	:: CATALOGO
+   =============================================================================================================================== */	
+	
+	.catalogo { 
+		padding: 2.5em 0 5em; 
+}
+	.catalogo header {
+		text-align:center;
+		margin-bottom:1.5em;
+}
+	.catalogo .item {
+		padding:-1px;
+		margin-bottom:1.5em;
+		background: none repeat scroll 0% 0% #FFFFFF;
+		box-shadow: 0px -1px 0px rgba(166, 166, 166, 0.7) inset, 0px 1px 0px rgba(255, 255, 255, 0.95) inset ;
+}
+	.catalogo .item figure { 
+		width:40%;
+		padding:1.5em; 
+}
+	.catalogo .item article {
+		margin-left:40%;
+		padding: 3% 5%;
+}
 	
 /* ===============================================================================================================================
    	SOFTWARE	
@@ -829,12 +653,11 @@
 	.banner.wdd figure img { position:absolute; top:-35%; left:0; }
 	.banner.wdd article { top:10%; }
 
-
 /* ===============================================================================================================================
    	@footer
    =============================================================================================================================== */	
 
-	#footer .inner { 
+	#footer .wrap { 
 		position:relative; 
 		height:100%; 
 }
