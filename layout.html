@@ -13,74 +13,270 @@
     <meta name="copyright" content="algoritmi.com">
 
     <title>ALGORITMI</title>
-
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
+
     <link rel="stylesheet" type="text/css" href="css/base.css?v=1.0.0" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css"  >
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.0.0" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css?v=1.0.0" media="all"  />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.1.0/css/font-awesome.min.css" >
-    
+
 	<!-- Parallax Content Slider -->
     <link rel="stylesheet" type="text/css" href="lib/Parallax-Content-Slider/css/style.css" /><noscript>
     <link rel="stylesheet" type="text/css" href="lib/Parallax-Content-Slider/css/nojs.css" /></noscript>    
-
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
     
-	<script src="js/modernizr-2.6.2.min.js"></script>       
+    <!-- HTML5 Shim - Respond.js - CSS3 Media query e CSS per IE. Supporto HTML5 e media queries per IE8 -->
+    <!-- ATTENZIONE: Respond.js non funziona se si visualizza la pagina via file://... -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/0.1/respond.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+    <![endif]-->
 </head>
-
-<body><!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+<body id="top" class="home"><!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 <div id="rack">
     
     <!-- :: HEADER :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-    <header id="header" class="bg-00 sb">
-        <hgroup>            
-			Header
-        </hgroup>
+	<header id="header" class="sb">
+    	<div id="header-a" class="clearfix">
+            <nav id="nav-a">
+            	<ul class="nav-inline"><li>
+                    <a class="text-home" href="index.html">Home</a></li><li>
+                    <a class="text-profilo" href="profilo.html">Profilo</a></li><li>
+                    <a class="text-accedi" href="login.html"><i class="fa fa-lock fa-fw"></i> Accedi</a></li><li>
+                    <a class="text-contatti" href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <nav id="nav-b">
+            	<ul class="nav-inline"><li>
+                    <a class="icon-facebook" href="#"><span class="screen-reader">Facebook</span></a></li><li>
+                    <a class="icon-twitter" href="#"><span class="screen-reader">Twitter</span></a></li><li>
+                    <a class="icon-linkedin" href="#"><span class="screen-reader">Linked In</span></a></li><li>
+                    <a class="icon-youtube" href="#"><span class="screen-reader">Youtube</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    	<div id="header-b" class="clearfix">
+			<div id="nav-search">
+                <form id="search-form">
+                    <input type="text" name="" id="" value="Cerca" onfocus="if(this.value=='Cerca')this.value='';" onblur="if(this.value=='')this.value='Cerca';" >                    
+                    <button type="submit" id=""><i class="icon-search"></i></button>
+                </form>        
+			</div>   
+            <nav id="nav-toggle">
+                <a class="nav-toggle"href="" ><span class="sr-only">Men&ugrave;</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+            </nav>
+            <nav id="nav-c" class="">    	
+                <ul class="nav-center"><li>
+                    <a href="index.html" title="ALGORITMI Software per professionisti e aziende"><span class="logo-algoritmi">Algoritmi</span></a>              
+                    <a href="software.html">Software</a></li><li>
+                    <a href="servizi.html">Servizi</a></li><li>
+                    <a href="eventi.html">Eventi</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- :: BODY :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
     <div id="body">
-        <div class="fluid">
-            Body
-        </div>
+    
+		<section class="hero">
+            <div class="wrap fluid text-center">
+            	<article class="page-inner text-white">
+                	<h1 class="animated fadeInDown">ALGORITMI</h1>
+                    <h4 class="animated fadeInDown delay-06s">Software e servizi per <strong>professionisti</strong> e <strong>aziende</strong></h4p>
+                	<p class="animated fadeInUp delay-09s">È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile.</p>
+                    <div class="cta"><a href="#" class="btn btn-large btn-turquoise">Per saperne di più...</a></div>
+                </article>
+            </div>
+        </section>
+
+		<section class="section-padding text-center">
+        	<div class="wrap fluid wp1">
+                <p class="lead">Lo scopo dell’utilizzo del Lorem Ipsum è che offre una normale distribuzione delle lettere (al contrario di quanto avviene se si utilizzano brevi frasi ripetute, ad esempio “testo qui”), apparendo come un normale blocco di testo leggibile.</p>
+                <p>Il lorem ipsum è un insieme di parole utilizzato da grafici, designer, programmatori e tipografi come testo riempitivo in bozzetti e prove grafiche[1]. È un testo privo di senso, composto da parole in lingua latina (spesso storpiate), riprese pseudocasualmente da uno scritto di Cicerone del 45 a.C.</p>
+        		<a href="#footer" class="btn-go-down"><i class="fa fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+		<section class="feature section-padding bg-white text-center">
+        	<div class="fluid">
+                
+                <h3 class="arrow">I numeri che raccontano la nostra storia</h3>
+                <hr class="space">
+                
+                <div class="grid xxxxx">
+                	<div class="col-04 wp2">
+                        <figure class="icon"><i class="fa fa-laptop long-shadow"></i></figure>
+                        <article>	
+                            <h2><strong>1986</strong></h2>
+                            <p>Nasce Algoritmi e il computer più diffuso era il Commodore 64. Microsoft Windows era appena nato.</p>
+                        </article>
+                    </div>
+                	<div class="col-04 wp2 delay-03s">
+                        <figure class="icon"><i class="fa fa-code long-shadow"></i></figure>
+                        <article>	
+                            <h2><strong>1000</strong></h2>
+                            <p>Mille clienti attivi distribuiti in otto province testimoniano il successo dalle radici profonde.</p>
+                        </article>
+                    </div>
+                	<div class="col-04 wp2 delay-06s">
+                        <figure class="icon"><i class="fa fa-heart long-shadow"></i></figure>
+                        <article>	
+                            <h2><strong>27</strong></h2>
+                            <p>Collaboratori, tutti professionisti di talento che dall'inizio partecipano alla crescita dell'azienda.</p>
+                        </article>
+                    </div>
+                </div>
+        	</div>
+        </section>
+        
+        <section class="partner section-padding">        
+    		<div class="">
+            	<ul class="grid tiles grid">
+                	<li class="col-00">
+                        <section class="tile wp4">
+                        	<figure class=""><img src="images/logo-microsoft.png" class="hero"></figure>
+                        </section>
+                    </li>
+                	<li class="col-00">
+                        <section class="tile wp4 delay-03s">
+                        	<figure class=""><img src="images/logo-dell.png" class="hero"></figure>
+                        </section>
+                    </li>
+                	<li class="col-00">
+                        <section class="tile wp4 delay-06s">
+                        	<figure class=""><img src="images/logo-ibm.png" class="hero"></figure>
+                        </section>
+                    </li>
+                	<li class="col-00 wp4">
+                        <section class="tile wp4 delay-09s">
+                        	<figure class=""><img src="images/logo-hp.png" class="hero"></figure>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+        </section>
+	
+    
+    	<section class="section-padding">
+        	<div class="wrap fluid">
+        		<a href="#top" class="btn-go-up"><i class="fa fa-chevron-up"></i></a>
+        	</div>
+        </section>
+    
+    
     </div>
     
     <!-- :: Footer :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-    <footer id="footer" class="bg-midnight-blue">
-	<div class="inner">
+    <footer id="footer" class="st">
+    	
+        <div id="footer-a" class="clearfix">
+        	<div class="fluid grid">
             
-    </div>
-    </footer>
+                <section class="col-03">
+                    <nav id="nav-e">
+                    	<h6 class="heading">Seguici su:</h6>
+                        <ul class="nav-block"><li>
+                            <a class="icon-facebook" href="#">Facebook</a></li><li>
+                            <a class="icon-youtube" href="#">Youtube</a></li><li>
+                            <a class="icon-linkedin" href="#">LinkedIn</a></li><li>
+                            <a class="icon-twitter" href="#">Twitter</a></li><li>
+                            <a class="icon-instagram" href="#">Instagram</a></li><li>
+                            <a class="icon-pinterest" href="#">Pinterest</a></li><li>
+                            <a class="icon-rss" href="#">RSS</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="col-03">
+                    <nav id="nav-f">
+                    	<h6 class="heading">Software</h6>
+                        <ul class="nav-block"><li>
+                            <a href="software.html#commercialisti">Commercialisti</a></li><li>
+                            <a href="software.html#consulenti">Consulenti del lavoro</a></li><li>
+                            <a href="software.html#avvocati">Avvocati</a></li><li>
+                            <a href="software.html#aziende">Aziende</a></li>
+                        </ul>
+                        <h6 class="heading">Risorse</h6>
+                        <ul class="nav-block"><li>
+                            <a href="servizi.html#assistenza">Ottieni assistenza</a></li><li>
+                            <a href="servizi.html#scadenze">Scadenze mensili</a></li><li>
+                            <a href="servizi.html#riviste">Riviste specialistiche</a></li><li>
+                            <a href="servizi.html#link">Link utili</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="col-03">
+                    <nav id="nav-g">
+                        <h6 class="heading">Servizi</h6>
+                        <ul class="nav-block"><li>
+                            <a href="servizi.html#formazione">Formazione</a></li><li>
+                            <a href="servizi.html#informazione">Informazione</a></li><li>
+                            <a href="servizi.html#consulenza">Consulenza</a></li><li>
+                            <a href="servizi.html#sviluppo">Sviluppo</a></li><li>
+                            <a href="servizi.html#forniture">Forniture</a></li>
+                        </ul>
+                        <h6 class="heading">Algoritmi</h6>
+                        <ul class="nav-block"><li>
+                            <a href="profilo.html">Profilo</a></li><li>
+                            <a href="impegno-sociale.html">Impegno sociale</a></li><li>
+                            <a href="recruitment.html">Opportunità di lavoro </a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section id="nav-h" class="col-03">
+                    <div class="banner call-center">
+                        <article>
+                            <h4><strong>Assistenza</strong></h4>
+                            <p>Poni un quesito ai nostri esperti</p>
+                        </article>
+                        <figure><img src="servizi/call-center/images/hero.png" alt="" ></figure>
+                    </div>
+                </section>
+			
+            </div>
+        </div>
+        
+        <div id="footer-b" class="clearfix">
+        	<div class="full">
+				<nav id="nav-d">
+                    <ul class="nav-inline">
+                        <li><span id="footer-copy">&copy; 2014 Algoritmi - P.IVA 02329500876</span></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="termini.html">Termini d'uso</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </nav>	
+                <div id="footer-partner">
+                    <span class="logo-teamsystem ">1° Software Partner TeamSystem - Sicilia - Catania</span>
+                </div>
+            </div>
+        </div>
+        
+	</footer>
 
-</div><!-- /container -->
+</div><!-- /rack -->
 
-<!-- :: jQquery :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- :: JS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>
+<script src="js/modernizr-2.6.2.min.js"></script>       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<!-- Nav-Search -->
-<script src="lib/nav-search/js/classie.js"></script>
-<script src="lib/nav-search/js/search.js"></script>
+<script src="js/jquery.jpanelmenu.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/waypoints.min.js"></script>
+        
+<script src="js/scripts.js"></script>
 
 <!-- Parallax Content Slider -->
 <script src="lib/Parallax-Content-Slider/js/jquery.cslider.js" type="text/javascript" ></script>
-<script type="text/javascript">
-	$(function() {
-		$('#cslider').cslider({
-			autoplay	: false,
-			interval	: 5000,
-		});
-	});
-</script>
-
 	
 </body>
 </html>

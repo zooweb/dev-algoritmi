@@ -29,10 +29,8 @@
 	
 	@media all and (max-width: 960px) {
 		
-		#nav-primary 	{ display: none; }
-		#header .logo 	{ width:30%; }
-		#nav-search 	{ width:60%;}			
-		#nav-toggle 	{ width:10%; display: block; }
+		#nav-c 			{ display: none; }		
+		#nav-toggle 	{ display: block; }
 		
 }	
 

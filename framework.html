@@ -37,39 +37,48 @@
     
     <!-- :: HEADER :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-    <header id="header" class="sb">
-        <div id="header-first" class="bg-midnight-blue clearfix">
-            <nav class="nav-secondary"><ul class="nav-inline"><li>
-                <a class="icon-facebook" href="#"><span class="screen-reader">Facebook</span></a></li><li>
-                <a class="icon-twitter" href="#"><span class="screen-reader">Twitter</span></a></li><li>
-                <a class="icon-linkedin" href="#"><span class="screen-reader">Linked In</span></a></li><li>
-                <a class="icon-youtube" href="#"><span class="screen-reader">Youtube</span></a></li><li>
-                <a class="text-profilo" href="profilo.html">Profilo</a></li><li>
-                <a class="text-accedi" href="login.html"><i class="fa fa-lock fa-fw"></i> Accedi</a></li><li>
-                <a class="text-contatti" href="contatti.html">Contatti</a></li></ul>
+	<header id="header" class="sb">
+    	<div id="header-a" class="clearfix">
+            <nav id="nav-a">
+            	<ul class="nav-inline"><li>
+                    <a class="text-home" href="index.html">Home</a></li><li>
+                    <a class="text-profilo" href="profilo.html">Profilo</a></li><li>
+                    <a class="text-accedi" href="login.html"><i class="fa fa-lock fa-fw"></i> Accedi</a></li><li>
+                    <a class="text-contatti" href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <nav id="nav-b">
+            	<ul class="nav-inline"><li>
+                    <a class="icon-facebook" href="#"><span class="screen-reader">Facebook</span></a></li><li>
+                    <a class="icon-twitter" href="#"><span class="screen-reader">Twitter</span></a></li><li>
+                    <a class="icon-linkedin" href="#"><span class="screen-reader">Linked In</span></a></li><li>
+                    <a class="icon-youtube" href="#"><span class="screen-reader">Youtube</span></a></li>
+                </ul>
             </nav>
         </div>
-        <div id="header-second" class="clearfix">    
-            <h1 class="logo"><a href="/" class="logo-algoritmi" title="ALGORITMI Software per professionisti e aziende">Algoritmi</a></h1>
-            <nav class="nav-primary"><ul class="nav-inline"><li>
-                <a href="software.html">Software</a></li><li>
-                <a href="servizi.html">Servizi</a></li><li>
-                <a href="eventi.html">Eventi</a></li></ul>
-            </nav>    
-            <nav id="nav-toggle" class="hide">
-            	<a class="nav-toggle"href="" ><span class="sr-only">Men&ugrave;</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+    	<div id="header-b" class="clearfix">
+			<div id="nav-search">
+                <form id="search-form">
+                    <input type="text" name="" id="" value="Cerca" onfocus="if(this.value=='Cerca')this.value='';" onblur="if(this.value=='')this.value='Cerca';" >                    
+                    <button type="submit" id=""><i class="icon-search"></i></button>
+                </form>        
+			</div>   
+            <nav id="nav-toggle">
+                <a class="nav-toggle"href="" ><span class="sr-only">Men&ugrave;</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
             </nav>
-            <div id="nav-search" class="clearfix">
-                <form id="" action="#" method="post">
-                   <div id="input"><input type="text" name="" id="" placeholder="Cosa stai cercando?"></div>
-                   <div id="label"><label for="search-terms" id="search-label" class="icon-search"><span class="screen-reader">Cerca</span></label></div>
-                </form>                
-            </div>
+            <nav id="nav-c" class="">    	
+                <ul class="nav-center"><li>
+                    <a href="index.html" title="ALGORITMI Software per professionisti e aziende"><span class="logo-algoritmi">Algoritmi</span></a>              
+                    <a href="software.html">Software</a></li><li>
+                    <a href="servizi.html">Servizi</a></li><li>
+                    <a href="eventi.html">Eventi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    
-    
+
     <!-- :: BODY :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    
     <div id="body">
         
             <!-- :: Slider :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->    
@@ -125,7 +134,7 @@
             
             <h4 class="page-header">Tiles e tile</h4>    
             <div class="tiles">
-            <div class="row x">
+            <div class="grid x">
             
                 <div class="col-06">        	
                     <section class="tile y2 s r bg-white postino-telematico">
@@ -187,7 +196,7 @@
             <div class="fluid">
             
             <h4 class="page-header">Banner</h4>    
-            <ul class="row x">
+            <ul class="grid x">
                 <li class="col-00">        	
                     <div class="cd">
                         <section class="banner postino-telematico">
@@ -333,7 +342,7 @@
                 <h4 class="page-header"><strong>Bottoni</strong></h4>
 
                 <h5 class="page-header">Dimensione dei bottoni</h5>                
-                <ul class="row x"><li class="col-02">
+                <ul class="grid x"><li class="col-02">
                     <a href="#" class="btn btn-link">btn btn-link</a></li><li class="col-02">
                     <a href="#" class="btn btn-default disabled">btn disabled</a></li><li class="col-08">
                     <a href="#" class="btn btn-default btn-block">btn btn-block</a></li><li class="col-02">
@@ -344,14 +353,14 @@
                     <a href="#" class="btn btn-default btn-large">btn btn-large</a></li></ul>
                 
                 <h5 class="page-header">Colori di default</h5>
-                <ul class="row x"><li class="col-02">
+                <ul class="grid x"><li class="col-02">
                     <a href="#" class="btn btn-primary">btn-primary</a></li><li class="col-02">
                     <a href="#" class="btn btn-info">btn-info</a></li><li class="col-02">
                     <a href="#" class="btn btn-success">btn-success</a></li><li class="col-02">
                     <a href="#" class="btn btn-warning">btn-warning</a></li><li class="col-02">
                     <a href="#" class="btn btn-danger">btn-danger</a></li></ul>
                 <h5 class="page-header">Flat-UI color</h5>
-                <ul class="row x"><li class="col-03">
+                <ul class="grid x"><li class="col-03">
                     <a href="#" class="btn btn-clouds">btn-clouds</a></li><li class="col-03">
                     <a href="#" class="btn btn-silver">btn-silver</a></li><li class="col-03">
                     <a href="#" class="btn btn-concrete">btn-concrete</a></li><li class="col-03">
@@ -406,7 +415,7 @@
                 <p class="lead">Le intestazioni sono tutte disponibili, da h1 fino ad h6.</p>
                 <p>Per personalizzare titoli e sottotitoli usare le .h1. .h2, ...h6.</p>
                 <hr />
-                <div class="row xxxxx">
+                <div class="grid xxxxx">
                     <div class="col-06">    
                         <h1>Heading <strong>H1</strong></h1>
                         <h2>Heading <strong>H2</strong></h2>
@@ -487,7 +496,7 @@
             <section class="section bg-white show-grid">
             <div class="fluid">
             
-            <ul class="row x">
+            <ul class="grid x">
                 <li class="col-01">col-01</li>
                 <li class="col-01">col-01</li>
                 <li class="col-01">col-01</li>
@@ -558,116 +567,174 @@
             
             </div>
             </section>
+
+            <!-- :: message-box :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+            <section class="section">
+            <div class="row fluid">
+
+                    <h3 class="page-header">Message Box</h3>
+                    <p class="lead">Le intestazioni sono tutte disponibili, da h1 fino ad h6.</p>
+                    <p>Per personalizzare titoli e sottotitoli usare le .h1. .h2, ...h6.</p>
+                    <hr />
+					
+                    <div class="message-box info">
+                    	<h5 class="title">message-box info</h5>
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+                    </div>	
+
+                    <div class="message-box primary">
+                    	<h5 class="title">message-box primary</h5>
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+                    </div>	
+
+                    <div class="message-box warning">
+                    	<h5 class="title">message-box warning</h5>
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+                    </div>	
+
+                    <div class="message-box danger">
+                    	<h5 class="title">message-box danger</h5>
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+                    </div>	
+
+                    <div class="message-box success">
+                    	<h5 class="title">message-box success</h5>
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+                    </div>	
+					
+            </div>
+            </section>        
+
+            <!-- :: Form :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+            <section class="section bg-white">
+                <div class="row fluid">
+                
+                    <h3 class="page-header">Form</h3>
+                    <p class="lead">Le intestazioni sono tutte disponibili, da h1 fino ad h6.</p>
+                    <p>Per personalizzare titoli e sottotitoli usare le .h1. .h2, ...h6.</p>
+                    <hr />
+                    
+                    <div class="alert-message warning"><p><strong>Attenzione!</strong> I campi contrassegnati con (*) asterisco sono obbligatori.</p></div>
+                    
+                    <form id="">
+                        <fieldset class="">                                                
+                        <legend>Anagrafica</legend>
+                        <section class="grid xx">
+                            <div class="col-06"><label>Cognome*</label><input id="cv[cognome]" type="text" class="controlled"></div>
+                            <div class="col-06"><label>Nome*</label><input id="cv[nome]" type="text" class="controlled"></div>   
+                            <div class="col-04"><label>Luogo di nascita*</label><input id="cv[luogo_di_nascita]" type="text" class="controlled"></div>
+                            <div class="col-04"><label>Data di nascita*</label><input id="cv[data_di_nascita]" type="text" class="controlled"></div>
+                            
+                            <div class="col-04">
+                            <label>Stato Civile</label>
+                            <select class="statocivile" id="cv[stato_civile]" class="controlled">
+                                <option value="Celibe/Nubile">Celibe/Nubile</option>
+                                <option value="Coniugato/Coniugata">Coniugato/Coniugata</option>
+                            </select>
+                            </div>
+                        </section>    
+                        </fieldset>                    
+                    </form>
+                
+                </div>
+            </section>	
     
          
     </div><!-- /body -->
-    
+
+
     <!-- :: Footer :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-    <footer id="footer" class="bg-midnight-blue">
-	<div class="inner">
-    
-        <section id="footer-action" class="fluid">
-            <div class="layout-3-3 content-center ">
-                <div class="layout-3-2">
-                    <div class="layout-3-1">	
-                        
-                        <div class="col1">
-                            <section class="socialize">
-                                <h5 class="heading">Seguici su:</h5>
-                                <ul class="social-link"><li>
-                                    <a class="icon-facebook" href="#"><span class="icon-text">Facebook</span></a></li><li>
-                                    <a class="icon-youtube" href="#"><span class="icon-text">Youtube</span></a></li><li>
-                                    <a class="icon-linkedin" href="#"><span class="icon-text">LinkedIn</span></a></li><li>
-                                    <a class="icon-twitter" href="#"><span class="icon-text">Twitter</span></a></li><li>
-                                    <a class="icon-instagram" href="#"><span class="icon-text">Instagram</span></a></li><li>
-                                    <a class="icon-pinterest" href="#"><span class="icon-text">Pinterest</span></a></li><li>
-                                    <a class="icon-rss" href="#"><span class="icon-text">RSS</span></a></li>
-                                </ul>
-                                <h5 class="heading">Resta in contatto</h5>
-                                <p>Ricevi gli ultimi aggiornamenti per e-mail</p>
-                                    <form id="newsletter" action="#" method="post" class="">
-                                        <div><input type="text" name="" id="" placeholder=""></div>
-                                    </form> 
-                            </section>
-                        </div>
-                       
-                        <div class="col2">
-                            <section class="footer-link row xx">
-                                <div class="col-06">
-                                   <h5 class="heading">Software</h5>
-                                    <ul class="smart-link"><li>
-                                        <a href="software.html#commercialisti">Commercialisti</a></li><li>
-                                        <a href="software.html#consulenti">Consulenti del lavoro</a></li><li>
-                                        <a href="software.html#avvocati">Avvocati</a></li><li>
-                                        <a href="software.html#aziende">Aziende</a></li>
-                                    </ul>
-                                    <h5 class="heading">Risorse</h5>
-                                    <ul class="smart-link"><li>
-                                        <a href="servizi.html#assistenza">Ottieni assistenza</a></li><li>
-                                        <a href="servizi.html#scadenze">Scadenze mensili</a></li><li>
-                                        <a href="servizi.html#riviste">Riviste specialistiche</a></li><li>
-                                        <a href="servizi.html#link">Link utili</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-06">
-                                    <h5 class="heading">Servizi</h5>
-                                    <ul class="smart-link"><li>
-                                        <a href="servizi.html#formazione">Formazione</a></li><li>
-                                        <a href="servizi.html#informazione">Informazione</a></li><li>
-                                        <a href="servizi.html#consulenza">Consulenza</a></li><li>
-                                        <a href="servizi.html#sviluppo">Sviluppo</a></li><li>
-                                        <a href="servizi.html#forniture">Forniture</a></li>
-                                    </ul>
-                                    <h5 class="heading">Algoritmi</h5>
-                                    <ul class="smart-link"><li>
-                                        <a href="profilo.html">Profilo</a></li><li>
-                                        <a href="impegno-sociale.html">Impegno sociale</a></li><li>
-                                        <a href="recruitment.html">Opportunità di lavoro </a></li><li>
-                                        <a href="contatti.html">Contatti</a></li>
-                                    </ul>
-                                </div>
-							</section>
-                        </div>
-
-                        <div class="col3">
-							<section class="footer-profile">
-                                <div class="banner bg-emerald call-center rb0">
-                                    <article>
-                                        <h4><strong>Assistenza</strong></h4>
-                                        <p>Poni un quesito ai nostri esperti</p>
-                                    </article>
-                                    <figure><img alt="" src="servizi/call-center/images/hero.png"></figure>
-                                </div>
-                                <div class="banner recruitment rt0">
-                                    <figure><img src="http://www.algoritmi.com/images/banner/curriculum.png" alt="" /></figure>
-                                    <article>
-                                        <h5>Opportunità di <strong>lavoro</strong></h5>
-                                        <p>Proponi la tua candidatura!</p>
-                                    </article>                    
-                                </div>
-							</section>  
-                        </div>        		
-
+    <footer id="footer" class="st">
+    	
+        <div id="footer-a" class="clearfix">
+        	<div class="fluid grid">
+            
+                <section class="col-03">
+                    <nav id="nav-e">
+                    	<h6 class="heading">Seguici su:</h6>
+                        <ul class="nav-block"><li>
+                            <a class="icon-facebook" href="#">Facebook</a></li><li>
+                            <a class="icon-youtube" href="#">Youtube</a></li><li>
+                            <a class="icon-linkedin" href="#">LinkedIn</a></li><li>
+                            <a class="icon-twitter" href="#">Twitter</a></li><li>
+                            <a class="icon-instagram" href="#">Instagram</a></li><li>
+                            <a class="icon-pinterest" href="#">Pinterest</a></li><li>
+                            <a class="icon-rss" href="#">RSS</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="col-03">
+                    <nav id="nav-f">
+                    	<h6 class="heading">Software</h6>
+                        <ul class="nav-block"><li>
+                            <a href="software.html#commercialisti">Commercialisti</a></li><li>
+                            <a href="software.html#consulenti">Consulenti del lavoro</a></li><li>
+                            <a href="software.html#avvocati">Avvocati</a></li><li>
+                            <a href="software.html#aziende">Aziende</a></li>
+                        </ul>
+                        <h6 class="heading">Risorse</h6>
+                        <ul class="nav-block"><li>
+                            <a href="servizi.html#assistenza">Ottieni assistenza</a></li><li>
+                            <a href="servizi.html#scadenze">Scadenze mensili</a></li><li>
+                            <a href="servizi.html#riviste">Riviste specialistiche</a></li><li>
+                            <a href="servizi.html#link">Link utili</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="col-03">
+                    <nav id="nav-g">
+                        <h6 class="heading">Servizi</h6>
+                        <ul class="nav-block"><li>
+                            <a href="servizi.html#formazione">Formazione</a></li><li>
+                            <a href="servizi.html#informazione">Informazione</a></li><li>
+                            <a href="servizi.html#consulenza">Consulenza</a></li><li>
+                            <a href="servizi.html#sviluppo">Sviluppo</a></li><li>
+                            <a href="servizi.html#forniture">Forniture</a></li>
+                        </ul>
+                        <h6 class="heading">Algoritmi</h6>
+                        <ul class="nav-block"><li>
+                            <a href="profilo.html">Profilo</a></li><li>
+                            <a href="impegno-sociale.html">Impegno sociale</a></li><li>
+                            <a href="recruitment.html">Opportunità di lavoro </a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section id="nav-h" class="col-03">
+                    <div class="banner call-center">
+                        <article>
+                            <h4><strong>Assistenza</strong></h4>
+                            <p>Poni un quesito ai nostri esperti</p>
+                        </article>
+                        <figure><img src="servizi/call-center/images/hero.png" alt="" ></figure>
                     </div>
+                </section>
+			
+            </div>
+        </div>
+        
+        <div id="footer-b" class="clearfix">
+        	<div class="full">
+				<nav id="nav-d">
+                    <ul class="nav-inline">
+                        <li><span id="footer-copy">&copy; 2014 Algoritmi - P.IVA 02329500876</span></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="termini.html">Termini d'uso</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </nav>	
+                <div id="footer-partner">
+                    <span class="logo-teamsystem ">1° Software Partner TeamSystem - Sicilia - Catania</span>
                 </div>
             </div>
-        </section>
-
-        <section id="footer-legal" class="bg-white">
-        	<span class="footer-copy">&copy; 2014 Algoritmi - P.IVA 02329500876</span>
-            <ul class="footer-nav">
-                <li><a href="contatti.html">Contatti</a></li>
-                <li><a href="termini.html">Termini d'uso</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-            <div class="footer-logo">
-                <span href="index.html" class="logo-teamsystem">1° Software Partner TeamSystem - Sicilia - Catania</span>
-            </div>        
-        </section>
+        </div>
         
-    </div>
-    </footer>
+	</footer>
+
 
 <!-- :: jQquery :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
